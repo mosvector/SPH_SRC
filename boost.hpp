@@ -4,16 +4,6 @@
 namespace/*or class/struct?*/ boost
 {
   // Nested containers:
-  class/*or struct*/ bad_lexical_cast : public bad_cast
-  {
-    // VFTable. Offset=0, Size=2, Start=2
-    // Corresponding base: std::bad_cast
-    // Owner: SophisSystem.dll
-    // VFTable with 0 offset end
-
-  public:
-  };
-
   class/*or struct*/ bad_weak_ptr : public exception
   {
     // VFTable. Offset=0, Size=2, Start=2
@@ -24,107 +14,9 @@ namespace/*or class/struct?*/ boost
   public:
   };
 
-  class condition_variable
-  {
-  public:
-  };
-
-  class condition_variable_any
-  {
-  public:
-  };
-
-  namespace/*or class/struct?*/ container
+  namespace/*or class/struct?*/ detail
   {
     // Nested containers:
-    class/*or struct*/ exception : public exception
-    {
-      // VFTable. Offset=0, Size=2, Start=2
-      // Corresponding base: std::exception
-      // Owner: SophisXmlTools.dll
-      // VFTable with 0 offset end
-
-    public:
-    };
-
-    template<typename T0, typename T1, typename T2, typename T4    >
-    class flat_map
-    {
-    public:
-    };
-#if 0 // Instances:
-// <long, long, struct std::less<long>, void>
-#if 0
-    template<>
-    class flat_map<long, long, struct std::less<long>, void>
-    {
-    public:
-    };
-#endif
-#endif
-
-
-    class/*or struct*/ out_of_range : public exception
-    {
-      // VFTable. Offset=0, Size=2, Start=2
-      // Corresponding base: container::container::exception
-      // Owner: SophisXmlTools.dll
-      // VFTable with 0 offset end
-
-    public:
-    };
-
-
-  };
-
-  class/*or struct*/ detail
-  {
-  public:
-    // Nested containers:
-    template<typename T0, typename T2    >
-    class/*or struct*/ basic_pointerbuf
-    {
-    public:
-    };
-#if 0 // Instances:
-// <char, class std::basic_stringbuf<char, struct std::char_traits<char>, class std::allocator<char>>>
-#if 0
-    template<>
-    class/*or struct*/ basic_pointerbuf<char, class std::basic_stringbuf<char, struct std::char_traits<char>, class std::allocator<char>>> : public basic_stringbuf<char, struct std::char_traits<char>, class std::allocator<char>>
-    {
-      // VFTable. Offset=0, Size=15, Start=15
-      // Corresponding base: basic_stringbuf::basic_stringbuf::basic_stringbuf<char, struct std::char_traits<char>, class std::allocator<char>>
-      // Owner: SophisSystem.dll
-      // VFTable with 0 offset end
-
-    public:
-    };
-#endif
-#endif
-
-
-    template<typename T0, typename T2    >
-    class/*or struct*/ basic_unlockedbuf
-    {
-    public:
-    };
-#if 0 // Instances:
-// <class std::basic_stringbuf<char, struct std::char_traits<char>, class std::allocator<char>>, char>
-#if 0
-    template<>
-    class/*or struct*/ basic_unlockedbuf<class std::basic_stringbuf<char, struct std::char_traits<char>, class std::allocator<char>>, char> : public basic_pointerbuf<char, class std::basic_stringbuf<char, struct std::char_traits<char>, class std::allocator<char>>>
-    {
-      // VFTable. Offset=0, Size=15, Start=15
-      // Corresponding base: basic_pointerbuf::basic_pointerbuf::basic_pointerbuf::basic_pointerbuf<char, class std::basic_stringbuf<char, struct std::char_traits<char>, class std::allocator<char>>>
-      // Owner: SophisSystem.dll
-      // VFTable with 0 offset end
-
-    public:
-    };
-#endif
-#endif
-
-
     class/*or struct*/ local_counted_base
     {
       // VFTable. Offset=0, Size=3, Start=0
@@ -143,47 +35,6 @@ namespace/*or class/struct?*/ boost
     public:
     };
 
-    template<typename T1    >
-    class/*or struct*/ thread_data
-    {
-    public:
-    };
-#if 0 // Instances:
-// <class `anonymous namespace'::PollingThreadExec>
-#if 0
-    template<>
-    class/*or struct*/ thread_data<class `anonymous namespace'::PollingThreadExec> : public thread_data_base
-    {
-      // VFTable. Offset=0, Size=3, Start=3
-      // Corresponding base: detail::detail::thread_data_base
-      // Owner: SophisSystem.dll
-      // VFTable with 0 offset end
-
-    public:
-    };
-#endif
-#endif
-
-
-    class/*or struct*/ thread_data_base
-    {
-      // Functions:
-      public: boost::detail::thread_data_base::thread_data_base(void)
-#if 0 // All found virtual functions names:
-      public: virtual boost::detail::thread_data_base::~thread_data_base(void)
-      public: virtual void boost::detail::thread_data_base::notify_all_at_thread_exit(class boost::condition_variable *, class boost::mutex *)
-#endif
-
-      // VFTable. Offset=0, Size=3, Start=0
-      // Added virtual functions:
-      public: virtual boost::detail::thread_data_base::~thread_data_base(void); // 0
-      public: virtual void unknown_vf_0_1(void); // 1
-      public: virtual void boost::detail::thread_data_base::notify_all_at_thread_exit(class boost::condition_variable *, class boost::mutex *); // 2
-      // VFTable with 0 offset end
-
-    public:
-    };
-
     namespace/*or class/struct?*/ win32
     {
       // Nested containers:
@@ -199,16 +50,11 @@ namespace/*or class/struct?*/ boost
     };
 
 
-    // Functions:
-    void * get_tss_data(void const *)
-    void set_tss_data(void const *, void (__cdecl *)(void (__cdecl *)(void *), void *), void (__cdecl *)(void *), void *, bool)
-  public:
   };
 
   class/*or struct*/ exception
   {
     // VFTable. Offset=0, Size=1, Start=0
-    // Owner: SophisSystem.dll
     // Owner: SophisXML.dll
     // Added virtual functions:
     public: virtual void unknown_vf_0_0(void) = 0; // 0
@@ -223,7 +69,6 @@ namespace/*or class/struct?*/ boost
     class/*or struct*/ clone_base
     {
       // VFTable. Offset=0, Size=3, Start=0
-      // Owner: SophisSystem.dll
       // Owner: SophisXML.dll
       // Added virtual functions:
       public: virtual void unknown_vf_0_0(void) = 0; // 0
@@ -241,15 +86,9 @@ namespace/*or class/struct?*/ boost
   {
     // VFTable. Offset=0, Size=2, Start=2
     // Corresponding base: boost::thread_exception
-    // Owner: SophisSystem.dll
     // Owner: SophisXML.dll
     // VFTable with 0 offset end
 
-  public:
-  };
-
-  class mutex
-  {
   public:
   };
 
@@ -260,9 +99,7 @@ namespace/*or class/struct?*/ boost
     {
       // VFTable. Offset=0, Size=2, Start=2
       // Corresponding base: std::bad_cast
-      // Owner: SophisSystem.dll
       // Owner: SophisXML.dll
-      // Owner: SophisXmlTools.dll
       // VFTable with 0 offset end
 
     public:
@@ -272,7 +109,6 @@ namespace/*or class/struct?*/ boost
     {
       // VFTable. Offset=0, Size=2, Start=2
       // Corresponding base: numeric::numeric::bad_numeric_cast
-      // Owner: SophisSystem.dll
       // Owner: SophisXML.dll
       // VFTable with 0 offset end
 
@@ -283,20 +119,13 @@ namespace/*or class/struct?*/ boost
     {
       // VFTable. Offset=0, Size=2, Start=2
       // Corresponding base: numeric::numeric::bad_numeric_cast
-      // Owner: SophisSystem.dll
       // Owner: SophisXML.dll
-      // Owner: SophisXmlTools.dll
       // VFTable with 0 offset end
 
     public:
     };
 
 
-  };
-
-  class recursive_mutex
-  {
-  public:
   };
 
   namespace/*or class/struct?*/ system
@@ -309,7 +138,6 @@ namespace/*or class/struct?*/ boost
       {
         // VFTable. Offset=0, Size=7, Start=0
         // Corresponding base: system::system::error_category
-        // Owner: SophisSystem.dll
         // Owner: SophisXML.dll
         // Added virtual functions:
         public: virtual void unknown_vf_0_0(void); // 0
@@ -328,7 +156,6 @@ namespace/*or class/struct?*/ boost
       {
         // VFTable. Offset=0, Size=7, Start=0
         // Corresponding base: system::system::error_category
-        // Owner: SophisSystem.dll
         // Owner: SophisXML.dll
         // Added virtual functions:
         public: virtual void unknown_vf_0_0(void); // 0
@@ -347,7 +174,6 @@ namespace/*or class/struct?*/ boost
       {
         // VFTable. Offset=0, Size=7, Start=0
         // Corresponding base: system::system::error_category
-        // Owner: SophisSystem.dll
         // Owner: SophisXML.dll
         // Added virtual functions:
         public: virtual void unknown_vf_0_0(void); // 0
@@ -374,7 +200,6 @@ namespace/*or class/struct?*/ boost
     {
       // VFTable. Offset=0, Size=2, Start=2
       // Corresponding base: std::runtime_error
-      // Owner: SophisSystem.dll
       // Owner: SophisXML.dll
       // VFTable with 0 offset end
 
@@ -387,27 +212,7 @@ namespace/*or class/struct?*/ boost
   class/*or struct*/ this_thread
   {
     // Functions:
-    class boost::thread::id get_id(void)
     bool interruptible_wait(void *, struct boost::detail::mono_platform_timepoint const &)
-  public:
-  };
-
-  class/*or struct*/ thread
-  {
-  public:
-    // Nested containers:
-    class id
-    {
-    public:
-    };
-
-
-    // Functions:
-    public: ~thread(void)
-    private: bool do_try_join_until(struct boost::detail::mono_platform_timepoint const &)
-    public: class id get_id(void) const
-    public: void join(void)
-    private: void start_thread(void)
   public:
   };
 
@@ -415,7 +220,6 @@ namespace/*or class/struct?*/ boost
   {
     // VFTable. Offset=0, Size=2, Start=2
     // Corresponding base: system::system::system_error
-    // Owner: SophisSystem.dll
     // Owner: SophisXML.dll
     // VFTable with 0 offset end
 
@@ -426,7 +230,6 @@ namespace/*or class/struct?*/ boost
   {
     // VFTable. Offset=0, Size=2, Start=2
     // Corresponding base: boost::thread_exception
-    // Owner: SophisSystem.dll
     // Owner: SophisXML.dll
     // VFTable with 0 offset end
 
