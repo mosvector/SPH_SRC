@@ -5,6 +5,57 @@ class/*or struct*/ std
 {
 public:
   // Nested containers:
+  template<typename T1  >
+  class _List_iterator
+  {
+  public:
+  };
+#if 0 // Instances:
+// <class std::_List_val<struct std::_List_simple_types<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>>>
+#if 0
+  template<>
+  class _List_iterator<class std::_List_val<struct std::_List_simple_types<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>>>
+  {
+  public:
+  };
+#endif
+#endif
+
+
+  template<typename T1  >
+  struct _List_simple_types
+  {
+  public:
+  };
+#if 0 // Instances:
+// <class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>
+#if 0
+  template<>
+  struct _List_simple_types<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>
+  {
+  public:
+  };
+#endif
+#endif
+
+
+  template<typename T1  >
+  class _List_val
+  {
+  public:
+  };
+#if 0 // Instances:
+// <struct std::_List_simple_types<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>>
+#if 0
+  template<>
+  class _List_val<struct std::_List_simple_types<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>>
+  {
+  public:
+  };
+#endif
+#endif
+
+
   class/*or struct*/ _Locinfo
   {
     // Functions:
@@ -14,15 +65,216 @@ public:
   public:
   };
 
-  class/*or struct*/ _System_error : public runtime_error
+  template<typename T1  >
+  class/*or struct*/ _Ref_count
   {
-    // VFTable. Offset=0, Size=2, Start=2
-    // Corresponding base: std::runtime_error
-    // Owner: SophisXML.dll
+  public:
+  };
+#if 0 // Instances:
+// <class `anonymous namespace'::StatisticsProcessor>
+#if 0
+  template<>
+  class/*or struct*/ _Ref_count<class `anonymous namespace'::StatisticsProcessor> : public _Ref_count_base
+  {
+    // VFTable. Offset=0, Size=4, Start=0
+    // Corresponding base: std::_Ref_count_base
+    // Owner: SophisSystem.dll
+    // Added virtual functions:
+    public: virtual void unknown_vf_0_0(void); // 0
+    public: virtual void unknown_vf_0_1(void); // 1
+    public: virtual void unknown_vf_0_2(void); // 2
+    public: virtual void unknown_vf_0_3(void); // 3
     // VFTable with 0 offset end
 
   public:
   };
+#endif
+// <class sphSystem::comm::ChannelReceiveThread>
+#if 0
+  template<>
+  class/*or struct*/ _Ref_count<class sphSystem::comm::ChannelReceiveThread> : public _Ref_count_base
+  {
+    // VFTable. Offset=0, Size=4, Start=0
+    // Corresponding base: std::_Ref_count_base
+    // Owner: SophisSystem.dll
+    // Added virtual functions:
+    public: virtual void unknown_vf_0_0(void); // 0
+    public: virtual void unknown_vf_0_1(void); // 1
+    public: virtual void unknown_vf_0_2(void); // 2
+    public: virtual void unknown_vf_0_3(void); // 3
+    // VFTable with 0 offset end
+
+  public:
+  };
+#endif
+// <class sphSystem::comm::ChannelSendThread>
+#if 0
+  template<>
+  class/*or struct*/ _Ref_count<class sphSystem::comm::ChannelSendThread> : public _Ref_count_base
+  {
+    // VFTable. Offset=0, Size=4, Start=0
+    // Corresponding base: std::_Ref_count_base
+    // Owner: SophisSystem.dll
+    // Added virtual functions:
+    public: virtual void unknown_vf_0_0(void); // 0
+    public: virtual void unknown_vf_0_1(void); // 1
+    public: virtual void unknown_vf_0_2(void); // 2
+    public: virtual void unknown_vf_0_3(void); // 3
+    // VFTable with 0 offset end
+
+  public:
+  };
+#endif
+// <class sphSystem::comm::SimpleChannelReceiveThread>
+#if 0
+  template<>
+  class/*or struct*/ _Ref_count<class sphSystem::comm::SimpleChannelReceiveThread> : public _Ref_count_base
+  {
+    // VFTable. Offset=0, Size=4, Start=0
+    // Corresponding base: std::_Ref_count_base
+    // Owner: SophisSystem.dll
+    // Added virtual functions:
+    public: virtual void unknown_vf_0_0(void); // 0
+    public: virtual void unknown_vf_0_1(void); // 1
+    public: virtual void unknown_vf_0_2(void); // 2
+    public: virtual void unknown_vf_0_3(void); // 3
+    // VFTable with 0 offset end
+
+  public:
+  };
+#endif
+// <class sphSystem::comm::SimpleChannelSendThread>
+#if 0
+  template<>
+  class/*or struct*/ _Ref_count<class sphSystem::comm::SimpleChannelSendThread> : public _Ref_count_base
+  {
+    // VFTable. Offset=0, Size=4, Start=0
+    // Corresponding base: std::_Ref_count_base
+    // Owner: SophisSystem.dll
+    // Added virtual functions:
+    public: virtual void unknown_vf_0_0(void); // 0
+    public: virtual void unknown_vf_0_1(void); // 1
+    public: virtual void unknown_vf_0_2(void); // 2
+    public: virtual void unknown_vf_0_3(void); // 3
+    // VFTable with 0 offset end
+
+  public:
+  };
+#endif
+// <class sphSystem::logger::AutoShiftWorkerThread>
+#if 0
+  template<>
+  class/*or struct*/ _Ref_count<class sphSystem::logger::AutoShiftWorkerThread> : public _Ref_count_base
+  {
+    // VFTable. Offset=0, Size=4, Start=0
+    // Corresponding base: std::_Ref_count_base
+    // Owner: SophisSystem.dll
+    // Added virtual functions:
+    public: virtual void unknown_vf_0_0(void); // 0
+    public: virtual void unknown_vf_0_1(void); // 1
+    public: virtual void unknown_vf_0_2(void); // 2
+    public: virtual void unknown_vf_0_3(void); // 3
+    // VFTable with 0 offset end
+
+  public:
+  };
+#endif
+// <class sphSystem::server::AutoShutDownThread>
+#if 0
+  template<>
+  class/*or struct*/ _Ref_count<class sphSystem::server::AutoShutDownThread> : public _Ref_count_base
+  {
+    // VFTable. Offset=0, Size=4, Start=0
+    // Corresponding base: std::_Ref_count_base
+    // Owner: SophisSystem.dll
+    // Added virtual functions:
+    public: virtual void unknown_vf_0_0(void); // 0
+    public: virtual void unknown_vf_0_1(void); // 1
+    public: virtual void unknown_vf_0_2(void); // 2
+    public: virtual void unknown_vf_0_3(void); // 3
+    // VFTable with 0 offset end
+
+  public:
+  };
+#endif
+// <class sphSystem::server::ProgramExitWatcherThread>
+#if 0
+  template<>
+  class/*or struct*/ _Ref_count<class sphSystem::server::ProgramExitWatcherThread> : public _Ref_count_base
+  {
+    // VFTable. Offset=0, Size=4, Start=0
+    // Corresponding base: std::_Ref_count_base
+    // Owner: SophisSystem.dll
+    // Added virtual functions:
+    public: virtual void unknown_vf_0_0(void); // 0
+    public: virtual void unknown_vf_0_1(void); // 1
+    public: virtual void unknown_vf_0_2(void); // 2
+    public: virtual void unknown_vf_0_3(void); // 3
+    // VFTable with 0 offset end
+
+  public:
+  };
+#endif
+// <class sphSystem::thread::MultiActionThread>
+#if 0
+  template<>
+  class/*or struct*/ _Ref_count<class sphSystem::thread::MultiActionThread> : public _Ref_count_base
+  {
+    // VFTable. Offset=0, Size=4, Start=0
+    // Corresponding base: std::_Ref_count_base
+    // Owner: SophisSystem.dll
+    // Added virtual functions:
+    public: virtual void unknown_vf_0_0(void); // 0
+    public: virtual void unknown_vf_0_1(void); // 1
+    public: virtual void unknown_vf_0_2(void); // 2
+    public: virtual void unknown_vf_0_3(void); // 3
+    // VFTable with 0 offset end
+
+  public:
+  };
+#endif
+// <class sphSystem::thread::RunnableWorkerThread>
+#if 0
+  template<>
+  class/*or struct*/ _Ref_count<class sphSystem::thread::RunnableWorkerThread> : public _Ref_count_base
+  {
+    // VFTable. Offset=0, Size=4, Start=0
+    // Corresponding base: std::_Ref_count_base
+    // Owner: SophisSystem.dll
+    // Added virtual functions:
+    public: virtual void unknown_vf_0_0(void); // 0
+    public: virtual void unknown_vf_0_1(void); // 1
+    public: virtual void unknown_vf_0_2(void); // 2
+    public: virtual void unknown_vf_0_3(void); // 3
+    // VFTable with 0 offset end
+
+  public:
+  };
+#endif
+#endif
+
+
+  class/*or struct*/ _Ref_count_base
+  {
+  public:
+  };
+
+  template<typename T1  >
+  struct _Simple_types
+  {
+  public:
+  };
+#if 0 // Instances:
+// <class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>
+#if 0
+  template<>
+  struct _Simple_types<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>
+  {
+  public:
+  };
+#endif
+#endif
+
 
   template<typename T0, typename T1, typename T2, typename T3, typename T5  >
   class _Tmap_traits
@@ -30,46 +282,6 @@ public:
   public:
   };
 #if 0 // Instances:
-// <class sophis::tools::dataModel::PlainValue const *, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class sophis::tools::dataModel::PlainValue const *>, class std::allocator<struct std::pair<class sophis::tools::dataModel::PlainValue const *const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>, 0>
-#if 0
-  template<>
-  class _Tmap_traits<class sophis::tools::dataModel::PlainValue const *, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class sophis::tools::dataModel::PlainValue const *>, class std::allocator<struct std::pair<class sophis::tools::dataModel::PlainValue const *const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>, 0>
-  {
-  public:
-  };
-#endif
-// <class sophis::xml::util::XWString, bool, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, bool>>, 0>
-#if 0
-  template<>
-  class _Tmap_traits<class sophis::xml::util::XWString, bool, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, bool>>, 0>
-  {
-  public:
-  };
-#endif
-// <class sophis::xml::util::XWString, class sophis::xml::util::XWString, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, class sophis::xml::util::XWString>>, 0>
-#if 0
-  template<>
-  class _Tmap_traits<class sophis::xml::util::XWString, class sophis::xml::util::XWString, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, class sophis::xml::util::XWString>>, 0>
-  {
-  public:
-  };
-#endif
-// <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, bool, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, bool>>, 0>
-#if 0
-  template<>
-  class _Tmap_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, bool, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, bool>>, 0>
-  {
-  public:
-  };
-#endif
-// <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair>>, 0>
-#if 0
-  template<>
-  class _Tmap_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair>>, 0>
-  {
-  public:
-  };
-#endif
 // <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>, 0>
 #if 0
   template<>
@@ -78,10 +290,18 @@ public:
   public:
   };
 #endif
-// <class xercesc_3_2::DOMNode const *, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo, struct std::less<class xercesc_3_2::DOMNode const *>, class std::allocator<struct std::pair<class xercesc_3_2::DOMNode const *const, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo>>, 0>
+// <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, unsigned __int64, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, unsigned __int64>>, 0>
 #if 0
   template<>
-  class _Tmap_traits<class xercesc_3_2::DOMNode const *, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo, struct std::less<class xercesc_3_2::DOMNode const *>, class std::allocator<struct std::pair<class xercesc_3_2::DOMNode const *const, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo>>, 0>
+  class _Tmap_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, unsigned __int64, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, unsigned __int64>>, 0>
+  {
+  public:
+  };
+#endif
+// <unsigned long, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>, struct std::less<unsigned long>, class std::allocator<struct std::pair<unsigned long const, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>>>, 1>
+#if 0
+  template<>
+  class _Tmap_traits<unsigned long, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>, struct std::less<unsigned long>, class std::allocator<struct std::pair<unsigned long const, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>>>, 1>
   {
   public:
   };
@@ -95,46 +315,6 @@ public:
   public:
   };
 #if 0 // Instances:
-// <class std::_Tmap_traits<class sophis::tools::dataModel::PlainValue const *, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class sophis::tools::dataModel::PlainValue const *>, class std::allocator<struct std::pair<class sophis::tools::dataModel::PlainValue const *const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>, 0>>
-#if 0
-  template<>
-  class/*or struct*/ _Tree<class std::_Tmap_traits<class sophis::tools::dataModel::PlainValue const *, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class sophis::tools::dataModel::PlainValue const *>, class std::allocator<struct std::pair<class sophis::tools::dataModel::PlainValue const *const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>, 0>>
-  {
-  public:
-  };
-#endif
-// <class std::_Tmap_traits<class sophis::xml::util::XWString, bool, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, bool>>, 0>>
-#if 0
-  template<>
-  class/*or struct*/ _Tree<class std::_Tmap_traits<class sophis::xml::util::XWString, bool, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, bool>>, 0>>
-  {
-  public:
-  };
-#endif
-// <class std::_Tmap_traits<class sophis::xml::util::XWString, class sophis::xml::util::XWString, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, class sophis::xml::util::XWString>>, 0>>
-#if 0
-  template<>
-  class/*or struct*/ _Tree<class std::_Tmap_traits<class sophis::xml::util::XWString, class sophis::xml::util::XWString, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, class sophis::xml::util::XWString>>, 0>>
-  {
-  public:
-  };
-#endif
-// <class std::_Tmap_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, bool, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, bool>>, 0>>
-#if 0
-  template<>
-  class/*or struct*/ _Tree<class std::_Tmap_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, bool, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, bool>>, 0>>
-  {
-  public:
-  };
-#endif
-// <class std::_Tmap_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair>>, 0>>
-#if 0
-  template<>
-  class/*or struct*/ _Tree<class std::_Tmap_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair>>, 0>>
-  {
-  public:
-  };
-#endif
 // <class std::_Tmap_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>, 0>>
 #if 0
   template<>
@@ -143,18 +323,18 @@ public:
   public:
   };
 #endif
-// <class std::_Tmap_traits<class xercesc_3_2::DOMNode const *, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo, struct std::less<class xercesc_3_2::DOMNode const *>, class std::allocator<struct std::pair<class xercesc_3_2::DOMNode const *const, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo>>, 0>>
+// <class std::_Tmap_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, unsigned __int64, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, unsigned __int64>>, 0>>
 #if 0
   template<>
-  class/*or struct*/ _Tree<class std::_Tmap_traits<class xercesc_3_2::DOMNode const *, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo, struct std::less<class xercesc_3_2::DOMNode const *>, class std::allocator<struct std::pair<class xercesc_3_2::DOMNode const *const, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo>>, 0>>
+  class/*or struct*/ _Tree<class std::_Tmap_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, unsigned __int64, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, unsigned __int64>>, 0>>
   {
   public:
   };
 #endif
-// <class std::_Tset_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, 0>>
+// <class std::_Tmap_traits<unsigned long, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>, struct std::less<unsigned long>, class std::allocator<struct std::pair<unsigned long const, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>>>, 1>>
 #if 0
   template<>
-  class/*or struct*/ _Tree<class std::_Tset_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, 0>>
+  class/*or struct*/ _Tree<class std::_Tmap_traits<unsigned long, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>, struct std::less<unsigned long>, class std::allocator<struct std::pair<unsigned long const, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>>>, 1>>
   {
   public:
   };
@@ -162,16 +342,101 @@ public:
 #endif
 
 
-  template<typename T0, typename T1, typename T2, typename T4  >
-  class _Tset_traits
+  template<typename T1  >
+  class _Tree_const_iterator
   {
   public:
   };
 #if 0 // Instances:
-// <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, 0>
+// <class std::_Tree_val<struct std::_Tree_simple_types<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>>>
 #if 0
   template<>
-  class _Tset_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, 0>
+  class _Tree_const_iterator<class std::_Tree_val<struct std::_Tree_simple_types<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>>>
+  {
+  public:
+  };
+#endif
+#endif
+
+
+  template<typename T1  >
+  class _Tree_iterator
+  {
+  public:
+  };
+#if 0 // Instances:
+// <class std::_Tree_val<struct std::_Tree_simple_types<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>>>
+#if 0
+  template<>
+  class _Tree_iterator<class std::_Tree_val<struct std::_Tree_simple_types<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>>>
+  {
+  public:
+  };
+#endif
+#endif
+
+
+  template<typename T1  >
+  struct _Tree_simple_types
+  {
+  public:
+  };
+#if 0 // Instances:
+// <struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>
+#if 0
+  template<>
+  struct _Tree_simple_types<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>
+  {
+  public:
+  };
+#endif
+#endif
+
+
+  template<typename T1  >
+  class _Tree_val
+  {
+  public:
+  };
+#if 0 // Instances:
+// <struct std::_Tree_simple_types<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>>
+#if 0
+  template<>
+  class _Tree_val<struct std::_Tree_simple_types<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>>
+  {
+  public:
+  };
+#endif
+#endif
+
+
+  template<typename T1  >
+  class _Vector_iterator
+  {
+  public:
+  };
+#if 0 // Instances:
+// <class std::_Vector_val<struct std::_Simple_types<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>>>
+#if 0
+  template<>
+  class _Vector_iterator<class std::_Vector_val<struct std::_Simple_types<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>>>
+  {
+  public:
+  };
+#endif
+#endif
+
+
+  template<typename T1  >
+  class _Vector_val
+  {
+  public:
+  };
+#if 0 // Instances:
+// <struct std::_Simple_types<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>>
+#if 0
+  template<>
+  class _Vector_val<struct std::_Simple_types<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>>
   {
   public:
   };
@@ -193,26 +458,34 @@ public:
   public:
   };
 #endif
-// <class sophis::tools::dataModel::Data const *>
+// <class sophisTools::base::RefCountHandle<class sophis::tools::util::NotificationListener<struct sophis::tools::util::Worker::JobTerminatedEvent>>>
 #if 0
   template<>
-  class allocator<class sophis::tools::dataModel::Data const *>
+  class allocator<class sophisTools::base::RefCountHandle<class sophis::tools::util::NotificationListener<struct sophis::tools::util::Worker::JobTerminatedEvent>>>
   {
   public:
   };
 #endif
-// <class sophis::tools::dataModel::DataContainer const *>
+// <class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>
 #if 0
   template<>
-  class allocator<class sophis::tools::dataModel::DataContainer const *>
+  class allocator<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>
   {
   public:
   };
 #endif
-// <class sophisTools::base::RefCountHandle<class sophisTools::io::RandomAccessInputStream>>
+// <class sophisTools::base::RefCountHandle<class sophisTools::comm::QuoteInfo>>
 #if 0
   template<>
-  class allocator<class sophisTools::base::RefCountHandle<class sophisTools::io::RandomAccessInputStream>>
+  class allocator<class sophisTools::base::RefCountHandle<class sophisTools::comm::QuoteInfo>>
+  {
+  public:
+  };
+#endif
+// <class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>
+#if 0
+  template<>
+  class allocator<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>
   {
   public:
   };
@@ -225,66 +498,34 @@ public:
   public:
   };
 #endif
-// <struct sophis::xml::dataModel::XMLDataExporterImpl::Position>
+// <struct sophisTools::logger::filterConstraint>
 #if 0
   template<>
-  class allocator<struct sophis::xml::dataModel::XMLDataExporterImpl::Position>
+  class allocator<struct sophisTools::logger::filterConstraint>
   {
   public:
   };
 #endif
-// <struct std::pair<class sophis::tools::dataModel::PlainValue const *const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>
+// <struct sophisTools::net::SelectReactor::HandlerInfo>
 #if 0
   template<>
-  class allocator<struct std::pair<class sophis::tools::dataModel::PlainValue const *const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>
+  class allocator<struct sophisTools::net::SelectReactor::HandlerInfo>
   {
   public:
   };
 #endif
-// <struct std::pair<class sophis::xml::util::XWString const, bool>>
+// <struct sphSystem::plugin::ListElement>
 #if 0
   template<>
-  class allocator<struct std::pair<class sophis::xml::util::XWString const, bool>>
+  class allocator<struct sphSystem::plugin::ListElement>
   {
   public:
   };
 #endif
-// <struct std::pair<class sophis::xml::util::XWString const, class sophis::xml::util::XWString>>
+// <struct std::pair<class sophisTools::time::Time24 const, class sophisTools::base::RefCountHandle<class sphSystem::thread::ScheduledAction>>>
 #if 0
   template<>
-  class allocator<struct std::pair<class sophis::xml::util::XWString const, class sophis::xml::util::XWString>>
-  {
-  public:
-  };
-#endif
-// <struct std::pair<class sophis::xml::util::XWString, class sophis::xml::util::XWString>>
-#if 0
-  template<>
-  class allocator<struct std::pair<class sophis::xml::util::XWString, class sophis::xml::util::XWString>>
-  {
-  public:
-  };
-#endif
-// <struct std::pair<class sophisTools::FlyWeightString const, class sophisTools::base::RefCountHandle<class sophis::xml::dataModel::DataFactory>>>
-#if 0
-  template<>
-  class allocator<struct std::pair<class sophisTools::FlyWeightString const, class sophisTools::base::RefCountHandle<class sophis::xml::dataModel::DataFactory>>>
-  {
-  public:
-  };
-#endif
-// <struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, bool>>
-#if 0
-  template<>
-  class allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, bool>>
-  {
-  public:
-  };
-#endif
-// <struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair>>
-#if 0
-  template<>
-  class allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair>>
+  class allocator<struct std::pair<class sophisTools::time::Time24 const, class sophisTools::base::RefCountHandle<class sphSystem::thread::ScheduledAction>>>
   {
   public:
   };
@@ -297,18 +538,26 @@ public:
   public:
   };
 #endif
-// <struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>
+// <struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, unsigned __int64>>
 #if 0
   template<>
-  class allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>
+  class allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, unsigned __int64>>
   {
   public:
   };
 #endif
-// <struct std::pair<class xercesc_3_2::DOMNode const *const, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo>>
+// <struct std::pair<unsigned long const, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>>>
 #if 0
   template<>
-  class allocator<struct std::pair<class xercesc_3_2::DOMNode const *const, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo>>
+  class allocator<struct std::pair<unsigned long const, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>>>
+  {
+  public:
+  };
+#endif
+// <unsigned char>
+#if 0
+  template<>
+  class allocator<unsigned char>
   {
   public:
   };
@@ -320,7 +569,7 @@ public:
   {
     // VFTable. Offset=0, Size=2, Start=2
     // Corresponding base: std::exception
-    // Owner: SophisXML.dll
+    // Owner: SophisSystem.dll
     // VFTable with 0 offset end
 
   public:
@@ -330,7 +579,7 @@ public:
   {
     // VFTable. Offset=0, Size=2, Start=2
     // Corresponding base: std::bad_alloc
-    // Owner: SophisXML.dll
+    // Owner: SophisSystem.dll
     // VFTable with 0 offset end
 
   public:
@@ -340,27 +589,7 @@ public:
   {
     // VFTable. Offset=0, Size=2, Start=2
     // Corresponding base: std::exception
-    // Owner: SophisXML.dll
-    // VFTable with 0 offset end
-
-  public:
-  };
-
-  class/*or struct*/ bad_optional_access : public exception
-  {
-    // VFTable. Offset=0, Size=2, Start=2
-    // Corresponding base: std::exception
-    // Owner: SophisXML.dll
-    // VFTable with 0 offset end
-
-  public:
-  };
-
-  class/*or struct*/ bad_variant_access : public exception
-  {
-    // VFTable. Offset=0, Size=2, Start=2
-    // Corresponding base: std::exception
-    // Owner: SophisXML.dll
+    // Owner: SophisSystem.dll
     // VFTable with 0 offset end
 
   public:
@@ -370,7 +599,7 @@ public:
   {
     // VFTable. Offset=0, Size=2, Start=2
     // Corresponding base: std::exception
-    // Owner: SophisXML.dll
+    // Owner: SophisSystem.dll
     // VFTable with 0 offset end
 
   public:
@@ -389,10 +618,7 @@ public:
   {
     // Functions:
     protected: std::basic_ios<char, struct std::char_traits<char>>::basic_ios<char, struct std::char_traits<char>>(void)
-    public: char std::basic_ios<char, struct std::char_traits<char>>::fill(void) const
-    public: class std::basic_streambuf<char, struct std::char_traits<char>> * std::basic_ios<char, struct std::char_traits<char>>::rdbuf(void) const
     public: void std::basic_ios<char, struct std::char_traits<char>>::setstate(int, bool)
-    public: class std::basic_ostream<char, struct std::char_traits<char>> * std::basic_ios<char, struct std::char_traits<char>>::tie(void) const
 #if 0 // All found virtual functions names:
     public: virtual std::basic_ios<char, struct std::char_traits<char>>::~basic_ios<char, struct std::char_traits<char>>(void)
 #endif
@@ -418,7 +644,6 @@ public:
     public: std::basic_istream<char, struct std::char_traits<char>>::basic_istream<char, struct std::char_traits<char>>(class std::basic_streambuf<char, struct std::char_traits<char>> *, bool)
     public: class std::basic_istream<char, struct std::char_traits<char>> & std::basic_istream<char, struct std::char_traits<char>>::operator>>(short &)
     public: class std::basic_istream<char, struct std::char_traits<char>> & std::basic_istream<char, struct std::char_traits<char>>::operator>>(unsigned short &)
-    public: class std::basic_istream<char, struct std::char_traits<char>> & std::basic_istream<char, struct std::char_traits<char>>::operator>>(int &)
     public: class std::basic_istream<char, struct std::char_traits<char>> & std::basic_istream<char, struct std::char_traits<char>>::operator>>(long &)
     public: class std::basic_istream<char, struct std::char_traits<char>> & std::basic_istream<char, struct std::char_traits<char>>::operator>>(unsigned long &)
     public: class std::basic_istream<char, struct std::char_traits<char>> & std::basic_istream<char, struct std::char_traits<char>>::operator>>(float &)
@@ -456,7 +681,7 @@ public:
   class/*or struct*/ basic_istringstream<char, struct std::char_traits<char>, class std::allocator<char>>
   {
     // VFTable. Offset=144, Size=1, Start=0
-    // Owner: SophisXML.dll
+    // Owner: SophisSystem.dll
     // Added virtual functions:
 #if 0 // Warning: There are virtual functions probably from base class.
     public: virtual void unknown_vf_144_0(void); // 0
@@ -490,10 +715,11 @@ public:
     public: class std::basic_ostream<char, struct std::char_traits<char>> & std::basic_ostream<char, struct std::char_traits<char>>::operator<<(unsigned long)
     public: class std::basic_ostream<char, struct std::char_traits<char>> & std::basic_ostream<char, struct std::char_traits<char>>::operator<<(float)
     public: class std::basic_ostream<char, struct std::char_traits<char>> & std::basic_ostream<char, struct std::char_traits<char>>::operator<<(double)
-    public: class std::basic_ostream<char, struct std::char_traits<char>> & std::basic_ostream<char, struct std::char_traits<char>>::operator<<(void const *)
+    public: class std::basic_ostream<char, struct std::char_traits<char>> & std::basic_ostream<char, struct std::char_traits<char>>::operator<<(class std::ios_base & (__cdecl *)(class std::ios_base &))
     public: class std::basic_ostream<char, struct std::char_traits<char>> & std::basic_ostream<char, struct std::char_traits<char>>::operator<<(__int64)
     public: class std::basic_ostream<char, struct std::char_traits<char>> & std::basic_ostream<char, struct std::char_traits<char>>::operator<<(unsigned __int64)
     public: class std::basic_ostream<char, struct std::char_traits<char>> & std::basic_ostream<char, struct std::char_traits<char>>::operator<<(bool)
+    public: void std::basic_ostream<char, struct std::char_traits<char>>::`vbase dtor'(void)
     public: void std::basic_ostream<char, struct std::char_traits<char>>::_Osfx(void)
     public: class std::basic_ostream<char, struct std::char_traits<char>> & std::basic_ostream<char, struct std::char_traits<char>>::flush(void)
 #if 0 // All found virtual functions names:
@@ -526,7 +752,7 @@ public:
   class/*or struct*/ basic_ostringstream<char, struct std::char_traits<char>, class std::allocator<char>>
   {
     // VFTable. Offset=136, Size=1, Start=0
-    // Owner: SophisXML.dll
+    // Owner: SophisSystem.dll
     // Added virtual functions:
 #if 0 // Warning: There are virtual functions probably from base class.
     public: virtual void unknown_vf_136_0(void); // 0
@@ -553,17 +779,7 @@ public:
     // Functions:
     protected: std::basic_streambuf<char, struct std::char_traits<char>>::basic_streambuf<char, struct std::char_traits<char>>(void)
     protected: char * std::basic_streambuf<char, struct std::char_traits<char>>::_Pninc(void)
-    protected: char * std::basic_streambuf<char, struct std::char_traits<char>>::eback(void) const
-    protected: char * std::basic_streambuf<char, struct std::char_traits<char>>::egptr(void) const
-    protected: char * std::basic_streambuf<char, struct std::char_traits<char>>::epptr(void) const
-    protected: void std::basic_streambuf<char, struct std::char_traits<char>>::gbump(int)
-    protected: char * std::basic_streambuf<char, struct std::char_traits<char>>::gptr(void) const
-    protected: char * std::basic_streambuf<char, struct std::char_traits<char>>::pbase(void) const
-    protected: char * std::basic_streambuf<char, struct std::char_traits<char>>::pptr(void) const
     public: int std::basic_streambuf<char, struct std::char_traits<char>>::sbumpc(void)
-    protected: void std::basic_streambuf<char, struct std::char_traits<char>>::setg(char *, char *, char *)
-    protected: void std::basic_streambuf<char, struct std::char_traits<char>>::setp(char *, char *, char *)
-    protected: void std::basic_streambuf<char, struct std::char_traits<char>>::setp(char *, char *)
     public: int std::basic_streambuf<char, struct std::char_traits<char>>::sputc(char)
     public: __int64 std::basic_streambuf<char, struct std::char_traits<char>>::sputn(char const *, __int64)
 #if 0 // All found virtual functions names:
@@ -638,7 +854,7 @@ public:
 #endif
 
   template<typename T0, typename T1, typename T3  >
-  class/*or struct*/ basic_stringbuf
+  class basic_stringbuf
   {
   public:
   };
@@ -646,11 +862,11 @@ public:
 // <char, struct std::char_traits<char>, class std::allocator<char>>
 #if 0
   template<>
-  class/*or struct*/ basic_stringbuf<char, struct std::char_traits<char>, class std::allocator<char>> : public basic_streambuf<char, struct std::char_traits<char>>
+  class basic_stringbuf<char, struct std::char_traits<char>, class std::allocator<char>> : public basic_streambuf<char, struct std::char_traits<char>>
   {
     // VFTable. Offset=0, Size=15, Start=15
     // Corresponding base: basic_streambuf::basic_streambuf::basic_streambuf<char, struct std::char_traits<char>>
-    // Owner: SophisXML.dll
+    // Owner: SophisSystem.dll
     // VFTable with 0 offset end
 
   public:
@@ -679,7 +895,7 @@ public:
   class/*or struct*/ exception
   {
     // VFTable. Offset=0, Size=2, Start=0
-    // Owner: SophisXML.dll
+    // Owner: SophisSystem.dll
     // Added virtual functions:
     public: virtual void unknown_vf_0_0(void); // 0
     public: virtual void unknown_vf_0_1(void); // 1
@@ -688,26 +904,10 @@ public:
   public:
   };
 
-  class/*or struct*/ ios_base
+  class ios_base
   {
-  public:
-    // Nested containers:
-    class/*or struct*/ failure : public system_error
-    {
-      // VFTable. Offset=0, Size=2, Start=2
-      // Corresponding base: std::system_error
-      // Owner: SophisXML.dll
-      // VFTable with 0 offset end
-
-    public:
-    };
-
-
     // Functions:
-    public: int flags(void) const
-    public: bool good(void) const
-    public: __int64 width(__int64)
-    public: __int64 width(void) const
+    public: void exceptions(int)
   public:
   };
 
@@ -717,30 +917,6 @@ public:
   public:
   };
 #if 0 // Instances:
-// <class sophis::tools::dataModel::PlainValue const *>
-#if 0
-  template<>
-  struct less<class sophis::tools::dataModel::PlainValue const *>
-  {
-  public:
-  };
-#endif
-// <class sophis::xml::util::XWString>
-#if 0
-  template<>
-  struct less<class sophis::xml::util::XWString>
-  {
-  public:
-  };
-#endif
-// <class sophisTools::FlyWeightString>
-#if 0
-  template<>
-  struct less<class sophisTools::FlyWeightString>
-  {
-  public:
-  };
-#endif
 // <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>
 #if 0
   template<>
@@ -749,10 +925,10 @@ public:
   public:
   };
 #endif
-// <class xercesc_3_2::DOMNode const *>
+// <unsigned long>
 #if 0
   template<>
-  struct less<class xercesc_3_2::DOMNode const *>
+  struct less<unsigned long>
   {
   public:
   };
@@ -766,34 +942,56 @@ public:
   public:
   };
 #if 0 // Instances:
-// <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::allocator<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>
+// <class sophisTools::base::RefCountHandle<class sophis::tools::util::NotificationListener<struct sophis::tools::util::Worker::JobTerminatedEvent>>, class std::allocator<class sophisTools::base::RefCountHandle<class sophis::tools::util::NotificationListener<struct sophis::tools::util::Worker::JobTerminatedEvent>>>>
 #if 0
   template<>
-  class list<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::allocator<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>
+  class/*or struct*/ list<class sophisTools::base::RefCountHandle<class sophis::tools::util::NotificationListener<struct sophis::tools::util::Worker::JobTerminatedEvent>>, class std::allocator<class sophisTools::base::RefCountHandle<class sophis::tools::util::NotificationListener<struct sophis::tools::util::Worker::JobTerminatedEvent>>>>
   {
   public:
   };
 #endif
-// <struct sophis::xml::dataModel::XMLDataExporterImpl::Position, class std::allocator<struct sophis::xml::dataModel::XMLDataExporterImpl::Position>>
+// <class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>, class std::allocator<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>>
 #if 0
   template<>
-  class/*or struct*/ list<struct sophis::xml::dataModel::XMLDataExporterImpl::Position, class std::allocator<struct sophis::xml::dataModel::XMLDataExporterImpl::Position>>
+  class/*or struct*/ list<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>, class std::allocator<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>>
+  {
+    // Functions:
+    public: class std::_List_iterator<class std::_List_val<struct std::_List_simple_types<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>>> std::list<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>, class std::allocator<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>>::begin(void)
+    public: class std::_List_iterator<class std::_List_val<struct std::_List_simple_types<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>>> std::list<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>, class std::allocator<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>>::end(void)
+    public: void std::list<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>, class std::allocator<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>>::pop_front(void)
+    public: void std::list<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>, class std::allocator<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>>::push_back(class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker> &&)
+    public: void std::list<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>, class std::allocator<class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker>>>::push_back(class sophisTools::base::RefCountHandle<class sophis::tools::util::Worker> const &)
+  public:
+  };
+#endif
+// <class sophisTools::base::RefCountHandle<class sophisTools::comm::QuoteInfo>, class std::allocator<class sophisTools::base::RefCountHandle<class sophisTools::comm::QuoteInfo>>>
+#if 0
+  template<>
+  class list<class sophisTools::base::RefCountHandle<class sophisTools::comm::QuoteInfo>, class std::allocator<class sophisTools::base::RefCountHandle<class sophisTools::comm::QuoteInfo>>>
   {
   public:
   };
 #endif
-// <struct std::pair<class sophis::xml::util::XWString, class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString, class sophis::xml::util::XWString>>>
+// <struct sophisTools::logger::filterConstraint, class std::allocator<struct sophisTools::logger::filterConstraint>>
 #if 0
   template<>
-  class/*or struct*/ list<struct std::pair<class sophis::xml::util::XWString, class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString, class sophis::xml::util::XWString>>>
+  class list<struct sophisTools::logger::filterConstraint, class std::allocator<struct sophisTools::logger::filterConstraint>>
   {
   public:
   };
 #endif
-// <struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>>
+// <struct sophisTools::net::SelectReactor::HandlerInfo, class std::allocator<struct sophisTools::net::SelectReactor::HandlerInfo>>
 #if 0
   template<>
-  class/*or struct*/ list<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>>
+  class list<struct sophisTools::net::SelectReactor::HandlerInfo, class std::allocator<struct sophisTools::net::SelectReactor::HandlerInfo>>
+  {
+  public:
+  };
+#endif
+// <struct sphSystem::plugin::ListElement, class std::allocator<struct sphSystem::plugin::ListElement>>
+#if 0
+  template<>
+  class/*or struct*/ list<struct sphSystem::plugin::ListElement, class std::allocator<struct sphSystem::plugin::ListElement>>
   {
   public:
   };
@@ -806,66 +1004,16 @@ public:
   public:
   };
 
-  class/*or struct*/ logic_error : public exception
-  {
-    // VFTable. Offset=0, Size=2, Start=2
-    // Corresponding base: std::exception
-    // Owner: SophisXML.dll
-    // VFTable with 0 offset end
-
-  public:
-  };
-
   template<typename T0, typename T1, typename T2, typename T4  >
   class map
   {
   public:
   };
 #if 0 // Instances:
-// <class sophis::tools::dataModel::PlainValue const *, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class sophis::tools::dataModel::PlainValue const *>, class std::allocator<struct std::pair<class sophis::tools::dataModel::PlainValue const *const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>>
+// <class sophisTools::time::Time24, class sophisTools::base::RefCountHandle<class sphSystem::thread::ScheduledAction>, struct sphSystem::thread::less_Time24, class std::allocator<struct std::pair<class sophisTools::time::Time24 const, class sophisTools::base::RefCountHandle<class sphSystem::thread::ScheduledAction>>>>
 #if 0
   template<>
-  class/*or struct*/ map<class sophis::tools::dataModel::PlainValue const *, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class sophis::tools::dataModel::PlainValue const *>, class std::allocator<struct std::pair<class sophis::tools::dataModel::PlainValue const *const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>> : public _Tree<class std::_Tmap_traits<class sophis::tools::dataModel::PlainValue const *, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class sophis::tools::dataModel::PlainValue const *>, class std::allocator<struct std::pair<class sophis::tools::dataModel::PlainValue const *const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>, 0>>
-  {
-  public:
-  };
-#endif
-// <class sophis::xml::util::XWString, bool, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, bool>>>
-#if 0
-  template<>
-  class/*or struct*/ map<class sophis::xml::util::XWString, bool, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, bool>>> : public _Tree<class std::_Tmap_traits<class sophis::xml::util::XWString, bool, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, bool>>, 0>>
-  {
-  public:
-  };
-#endif
-// <class sophis::xml::util::XWString, class sophis::xml::util::XWString, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, class sophis::xml::util::XWString>>>
-#if 0
-  template<>
-  class/*or struct*/ map<class sophis::xml::util::XWString, class sophis::xml::util::XWString, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, class sophis::xml::util::XWString>>> : public _Tree<class std::_Tmap_traits<class sophis::xml::util::XWString, class sophis::xml::util::XWString, struct std::less<class sophis::xml::util::XWString>, class std::allocator<struct std::pair<class sophis::xml::util::XWString const, class sophis::xml::util::XWString>>, 0>>
-  {
-  public:
-  };
-#endif
-// <class sophisTools::FlyWeightString, class sophisTools::base::RefCountHandle<class sophis::xml::dataModel::DataFactory>, struct std::less<class sophisTools::FlyWeightString>, class std::allocator<struct std::pair<class sophisTools::FlyWeightString const, class sophisTools::base::RefCountHandle<class sophis::xml::dataModel::DataFactory>>>>
-#if 0
-  template<>
-  class map<class sophisTools::FlyWeightString, class sophisTools::base::RefCountHandle<class sophis::xml::dataModel::DataFactory>, struct std::less<class sophisTools::FlyWeightString>, class std::allocator<struct std::pair<class sophisTools::FlyWeightString const, class sophisTools::base::RefCountHandle<class sophis::xml::dataModel::DataFactory>>>>
-  {
-  public:
-  };
-#endif
-// <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, bool, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, bool>>>
-#if 0
-  template<>
-  class/*or struct*/ map<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, bool, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, bool>>> : public _Tree<class std::_Tmap_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, bool, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, bool>>, 0>>
-  {
-  public:
-  };
-#endif
-// <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair>>>
-#if 0
-  template<>
-  class/*or struct*/ map<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair>>> : public _Tree<class std::_Tmap_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair>>, 0>>
+  class map<class sophisTools::time::Time24, class sophisTools::base::RefCountHandle<class sphSystem::thread::ScheduledAction>, struct sphSystem::thread::less_Time24, class std::allocator<struct std::pair<class sophisTools::time::Time24 const, class sophisTools::base::RefCountHandle<class sphSystem::thread::ScheduledAction>>>>
   {
   public:
   };
@@ -878,10 +1026,10 @@ public:
   public:
   };
 #endif
-// <class xercesc_3_2::DOMNode const *, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo, struct std::less<class xercesc_3_2::DOMNode const *>, class std::allocator<struct std::pair<class xercesc_3_2::DOMNode const *const, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo>>>
+// <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, unsigned __int64, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, unsigned __int64>>>
 #if 0
   template<>
-  class/*or struct*/ map<class xercesc_3_2::DOMNode const *, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo, struct std::less<class xercesc_3_2::DOMNode const *>, class std::allocator<struct std::pair<class xercesc_3_2::DOMNode const *const, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo>>> : public _Tree<class std::_Tmap_traits<class xercesc_3_2::DOMNode const *, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo, struct std::less<class xercesc_3_2::DOMNode const *>, class std::allocator<struct std::pair<class xercesc_3_2::DOMNode const *const, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo>>, 0>>
+  class/*or struct*/ map<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, unsigned __int64, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, unsigned __int64>>> : public _Tree<class std::_Tmap_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, unsigned __int64, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, unsigned __int64>>, 0>>
   {
   public:
   };
@@ -889,15 +1037,22 @@ public:
 #endif
 
 
-  class/*or struct*/ out_of_range : public logic_error
+  template<typename T0, typename T1, typename T2, typename T4  >
+  class/*or struct*/ multimap
   {
-    // VFTable. Offset=0, Size=2, Start=2
-    // Corresponding base: std::logic_error
-    // Owner: SophisXML.dll
-    // VFTable with 0 offset end
-
   public:
   };
+#if 0 // Instances:
+// <unsigned long, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>, struct std::less<unsigned long>, class std::allocator<struct std::pair<unsigned long const, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>>>>
+#if 0
+  template<>
+  class/*or struct*/ multimap<unsigned long, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>, struct std::less<unsigned long>, class std::allocator<struct std::pair<unsigned long const, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>>>> : public _Tree<class std::_Tmap_traits<unsigned long, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>, struct std::less<unsigned long>, class std::allocator<struct std::pair<unsigned long const, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>>>, 1>>
+  {
+  public:
+  };
+#endif
+#endif
+
 
   template<typename T0, typename T2  >
   struct pair
@@ -905,66 +1060,18 @@ public:
   public:
   };
 #if 0 // Instances:
-// <class sophis::tools::dataModel::PlainValue const *const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>
+// <class sophisTools::time::Time24 const, class sophisTools::base::RefCountHandle<class sphSystem::thread::ScheduledAction>>
 #if 0
   template<>
-  struct pair<class sophis::tools::dataModel::PlainValue const *const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>
+  struct pair<class sophisTools::time::Time24 const, class sophisTools::base::RefCountHandle<class sphSystem::thread::ScheduledAction>>
   {
   public:
   };
 #endif
-// <class sophis::xml::dataModel::XMLDataExporterImpl::PositionList, class sophis::xml::dataModel::XMLDataExporterImpl::PositionList>
+// <class std::_Tree_iterator<class std::_Tree_val<struct std::_Tree_simple_types<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>>>, bool>
 #if 0
   template<>
-  class/*or struct*/ pair<class sophis::xml::dataModel::XMLDataExporterImpl::PositionList, class sophis::xml::dataModel::XMLDataExporterImpl::PositionList>
-  {
-  public:
-  };
-#endif
-// <class sophis::xml::util::XWString const, bool>
-#if 0
-  template<>
-  struct pair<class sophis::xml::util::XWString const, bool>
-  {
-  public:
-  };
-#endif
-// <class sophis::xml::util::XWString const, class sophis::xml::util::XWString>
-#if 0
-  template<>
-  struct pair<class sophis::xml::util::XWString const, class sophis::xml::util::XWString>
-  {
-  public:
-  };
-#endif
-// <class sophis::xml::util::XWString, class sophis::xml::util::XWString>
-#if 0
-  template<>
-  struct pair<class sophis::xml::util::XWString, class sophis::xml::util::XWString>
-  {
-  public:
-  };
-#endif
-// <class sophisTools::FlyWeightString const, class sophisTools::base::RefCountHandle<class sophis::xml::dataModel::DataFactory>>
-#if 0
-  template<>
-  struct pair<class sophisTools::FlyWeightString const, class sophisTools::base::RefCountHandle<class sophis::xml::dataModel::DataFactory>>
-  {
-  public:
-  };
-#endif
-// <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, bool>
-#if 0
-  template<>
-  struct pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, bool>
-  {
-  public:
-  };
-#endif
-// <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair>
-#if 0
-  template<>
-  struct pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class sophis::xml::dataModel::XMLDataExporterImpl::PositionListPair>
+  struct pair<class std::_Tree_iterator<class std::_Tree_val<struct std::_Tree_simple_types<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>>>, bool>
   {
   public:
   };
@@ -977,50 +1084,30 @@ public:
   public:
   };
 #endif
-// <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>
+// <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, unsigned __int64>
 #if 0
   template<>
-  struct pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>
+  struct pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const, unsigned __int64>
   {
-    // Functions:
-    public: std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>(struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>> const &)
   public:
   };
 #endif
-// <class xercesc_3_2::DOMNode const *const, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo>
+// <unsigned long const, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>>
 #if 0
   template<>
-  struct pair<class xercesc_3_2::DOMNode const *const, struct sophis::xml::dataModel::XMLDataImporterImpl::NodeInfo>
+  struct pair<unsigned long const, class sophisTools::base::RefCountHandle<class sophisTools::base::Runnable>>
   {
   public:
   };
 #endif
 #endif
 
-
-#if 0
-  template<>
-  struct pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>
-  {
-  public:
-  };
-#endif
-
-  class/*or struct*/ range_error : public runtime_error
-  {
-    // VFTable. Offset=0, Size=2, Start=2
-    // Corresponding base: std::runtime_error
-    // Owner: SophisXML.dll
-    // VFTable with 0 offset end
-
-  public:
-  };
 
   class/*or struct*/ runtime_error : public exception
   {
     // VFTable. Offset=0, Size=2, Start=2
     // Corresponding base: std::exception
-    // Owner: SophisXML.dll
+    // Owner: SophisSystem.dll
     // VFTable with 0 offset end
 
   public:
@@ -1035,7 +1122,7 @@ public:
 // <class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>
 #if 0
   template<>
-  class set<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>> : public _Tree<class std::_Tset_traits<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, 0>>
+  class set<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, struct std::less<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>
   {
   public:
   };
@@ -1043,15 +1130,38 @@ public:
 #endif
 
 
-  class/*or struct*/ system_error : public _System_error
+  template<typename T1  >
+  class shared_ptr
   {
-    // VFTable. Offset=0, Size=2, Start=2
-    // Corresponding base: std::_System_error
-    // Owner: SophisXML.dll
-    // VFTable with 0 offset end
-
   public:
   };
+#if 0 // Instances:
+// <class sphSystem::thread::MultiActionThread>
+#if 0
+  template<>
+  class shared_ptr<class sphSystem::thread::MultiActionThread>
+  {
+  public:
+  };
+#endif
+// <class sphSystem::thread::PollingThread>
+#if 0
+  template<>
+  class shared_ptr<class sphSystem::thread::PollingThread>
+  {
+  public:
+  };
+#endif
+// <class sphSystem::thread::RunnableBase>
+#if 0
+  template<>
+  class shared_ptr<class sphSystem::thread::RunnableBase>
+  {
+  public:
+  };
+#endif
+#endif
+
 
   template<typename T0, typename T2  >
   class vector
@@ -1059,27 +1169,14 @@ public:
   public:
   };
 #if 0 // Instances:
-// <class sophis::tools::dataModel::Data const *, class std::allocator<class sophis::tools::dataModel::Data const *>>
+// <class sophisTools::base::RefCountHandle<class sophisTools::io::Library>, class std::allocator<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>>
 #if 0
   template<>
-  class/*or struct*/ vector<class sophis::tools::dataModel::Data const *, class std::allocator<class sophis::tools::dataModel::Data const *>>
+  class/*or struct*/ vector<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>, class std::allocator<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>>
   {
-  public:
-  };
-#endif
-// <class sophis::tools::dataModel::DataContainer const *, class std::allocator<class sophis::tools::dataModel::DataContainer const *>>
-#if 0
-  template<>
-  class/*or struct*/ vector<class sophis::tools::dataModel::DataContainer const *, class std::allocator<class sophis::tools::dataModel::DataContainer const *>>
-  {
-  public:
-  };
-#endif
-// <class sophisTools::base::RefCountHandle<class sophisTools::io::RandomAccessInputStream>, class std::allocator<class sophisTools::base::RefCountHandle<class sophisTools::io::RandomAccessInputStream>>>
-#if 0
-  template<>
-  class vector<class sophisTools::base::RefCountHandle<class sophisTools::io::RandomAccessInputStream>, class std::allocator<class sophisTools::base::RefCountHandle<class sophisTools::io::RandomAccessInputStream>>>
-  {
+    // Functions:
+    public: class std::_Vector_iterator<class std::_Vector_val<struct std::_Simple_types<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>>> std::vector<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>, class std::allocator<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>>::begin(void)
+    public: class std::_Vector_iterator<class std::_Vector_val<struct std::_Simple_types<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>>> std::vector<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>, class std::allocator<class sophisTools::base::RefCountHandle<class sophisTools::io::Library>>>::end(void)
   public:
   };
 #endif
@@ -1091,10 +1188,10 @@ public:
   public:
   };
 #endif
-// <struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>>
+// <unsigned char, class std::allocator<unsigned char>>
 #if 0
   template<>
-  class vector<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>, class std::allocator<struct std::pair<class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>>>>>
+  class vector<unsigned char, class std::allocator<unsigned char>>
   {
   public:
   };
@@ -1104,6 +1201,7 @@ public:
 
 
   // Functions:
+  void _Throw_C_error(int)
   void _Xbad_alloc(void)
   void _Xlength_error(char const *)
   void _Xout_of_range(char const *)

@@ -4,7 +4,7 @@
 class/*or struct*/ type_info
 {
   // VFTable. Offset=0, Size=1, Start=0
-  // Owner: SophisXML.dll
+  // Owner: SophisSystem.dll
   // Added virtual functions:
   public: virtual void unknown_vf_0_0(void); // 0
   // VFTable with 0 offset end

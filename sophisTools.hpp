@@ -8,23 +8,7 @@ public:
   class CSRDay
   {
     // Functions:
-    public: CSRDay(int, int, int)
-  public:
-  };
-
-  class FlyWeightString
-  {
-    // Functions:
-    public: FlyWeightString(class sophisTools::FlyWeightString const &)
-    public: FlyWeightString(class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &)
-    public: FlyWeightString(void)
-    public: ~FlyWeightString(void)
-    public: class sophisTools::FlyWeightString & operator=(class sophisTools::FlyWeightString const &)
-    public: class sophisTools::FlyWeightString & operator=(class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &)
-    public: bool operator==(class sophisTools::FlyWeightString const &) const
-    public: class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const & operator class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &(void) const
-    public: bool operator<(class sophisTools::FlyWeightString const &) const
-    public: class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const & get(void) const
+    public: CSRDay(long)
   public:
   };
 
@@ -46,8 +30,10 @@ public:
     class ExceptionBase
     {
       // Functions:
+      protected: sophisTools::base::ExceptionBase::ExceptionBase(char const *, char const *, long)
       protected: sophisTools::base::ExceptionBase::ExceptionBase(char const *, char const *, long, bool, bool)
       public: sophisTools::base::ExceptionBase::ExceptionBase(class sophisTools::base::ExceptionBase const &)
+      public: class sophisTools::base::ExceptionBase & sophisTools::base::ExceptionBase::operator=(class sophisTools::base::ExceptionBase const &)
       public: char const * sophisTools::base::ExceptionBase::operator char const *(void) const
       public: class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> sophisTools::base::ExceptionBase::getError(void) const
       public: char const * sophisTools::base::ExceptionBase::getName(void) const
@@ -58,7 +44,7 @@ public:
     public:
     };
 
-    class GeneralException
+    class GeneralException : public ExceptionBase
     {
       // Functions:
       public: sophisTools::base::GeneralException::GeneralException(class sophisTools::base::GeneralException const &)
@@ -74,6 +60,11 @@ public:
     {
       // Functions:
       public: sophisTools::base::InvalidArgument::InvalidArgument(class sophisTools::base::InvalidArgument const &)
+      public: sophisTools::base::InvalidArgument::InvalidArgument(char const *)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::base::InvalidArgument::~InvalidArgument(void)
+#endif
+
     public:
     };
 
@@ -89,6 +80,26 @@ public:
     public:
     };
 
+    class InvalidParameter
+    {
+      // Functions:
+      public: sophisTools::base::InvalidParameter::InvalidParameter(class sophisTools::base::InvalidParameter const &)
+      public: sophisTools::base::InvalidParameter::InvalidParameter(char const *, char const *, char const *)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::base::InvalidParameter::~InvalidParameter(void)
+#endif
+
+    public:
+    };
+
+    class/*or struct*/ LocaleUtil
+    {
+      // Static functions:
+      public: static void sophisTools::base::LocaleUtil::dispose(void)
+      public: static void sophisTools::base::LocaleUtil::init(void)
+    public:
+    };
+
     class NamedInvalidArgument
     {
       // Functions:
@@ -96,18 +107,6 @@ public:
       public: sophisTools::base::NamedInvalidArgument::NamedInvalidArgument(char const *, char const *, char const *)
 #if 0 // All found virtual functions names:
       public: virtual sophisTools::base::NamedInvalidArgument::~NamedInvalidArgument(void)
-#endif
-
-    public:
-    };
-
-    class NotImplemented
-    {
-      // Functions:
-      public: sophisTools::base::NotImplemented::NotImplemented(class sophisTools::base::NotImplemented const &)
-      public: sophisTools::base::NotImplemented::NotImplemented(char const *)
-#if 0 // All found virtual functions names:
-      public: virtual sophisTools::base::NotImplemented::~NotImplemented(void)
 #endif
 
     public:
@@ -125,12 +124,10 @@ public:
     public:
     };
 
-    class RefCount
+    class/*or struct*/ RefCount
     {
       // Functions:
-      public: sophisTools::base::RefCount::RefCount(class sophisTools::base::RefCount const &)
       public: sophisTools::base::RefCount::RefCount(void)
-      public: class sophisTools::base::RefCount & sophisTools::base::RefCount::operator=(class sophisTools::base::RefCount const &)
 #if 0 // All found virtual functions names:
       public: virtual sophisTools::base::RefCount::~RefCount(void)
 #endif
@@ -144,42 +141,26 @@ public:
     public:
     };
 #if 0 // Instances:
-// <class sophis::tools::dataModel::ParentStack>
+// <class sophis::tools::dataModel::DataTypeRepository>
 #if 0
     template<>
-    class RefCountHandle<class sophis::tools::dataModel::ParentStack>
+    class RefCountHandle<class sophis::tools::dataModel::DataTypeRepository>
     {
     public:
     };
 #endif
-// <class sophis::tools::dataModel::Transformer>
+// <class sophis::tools::util::NotificationListener<struct sophis::tools::util::Worker::JobTerminatedEvent>>
 #if 0
     template<>
-    class RefCountHandle<class sophis::tools::dataModel::Transformer>
+    class RefCountHandle<class sophis::tools::util::NotificationListener<struct sophis::tools::util::Worker::JobTerminatedEvent>>
     {
     public:
     };
 #endif
-// <class sophis::tools::util::ByteArray>
+// <class sophis::tools::util::NotificationProvider<struct sophis::tools::util::Worker::JobTerminatedEvent>>
 #if 0
     template<>
-    class RefCountHandle<class sophis::tools::util::ByteArray>
-    {
-    public:
-    };
-#endif
-// <class sophis::tools::util::StringBoolMap>
-#if 0
-    template<>
-    class RefCountHandle<class sophis::tools::util::StringBoolMap>
-    {
-    public:
-    };
-#endif
-// <class sophis::tools::util::StringPairList>
-#if 0
-    template<>
-    class RefCountHandle<class sophis::tools::util::StringPairList>
+    class RefCountHandle<class sophis::tools::util::NotificationProvider<struct sophis::tools::util::Worker::JobTerminatedEvent>>
     {
     public:
     };
@@ -192,42 +173,102 @@ public:
     public:
     };
 #endif
-// <class sophis::xml::dataModel::BasicGrammarPoolImpl>
+// <class sophis::tools::util::WorkerAllocator>
 #if 0
     template<>
-    class RefCountHandle<class sophis::xml::dataModel::BasicGrammarPoolImpl>
+    class RefCountHandle<class sophis::tools::util::WorkerAllocator>
     {
     public:
     };
 #endif
-// <class sophis::xml::dataModel::DataFactory>
+// <class sophis::tools::util::WorkerList>
 #if 0
     template<>
-    class RefCountHandle<class sophis::xml::dataModel::DataFactory>
+    class RefCountHandle<class sophis::tools::util::WorkerList>
     {
     public:
     };
 #endif
-// <class sophis::xml::dataModel::GrammarLoadingGuard>
+// <class sophis::tools::util::WorkerVisitor>
 #if 0
     template<>
-    class RefCountHandle<class sophis::xml::dataModel::GrammarLoadingGuard>
+    class RefCountHandle<class sophis::tools::util::WorkerVisitor>
     {
     public:
     };
 #endif
-// <class sophis::xml::dataModel::GrammarPool>
+// <class sophisTools::base::Runnable>
 #if 0
     template<>
-    class RefCountHandle<class sophis::xml::dataModel::GrammarPool>
+    class RefCountHandle<class sophisTools::base::Runnable>
     {
     public:
     };
 #endif
-// <class sophis::xml::util::DOMDocumentWrapper>
+// <class sophisTools::base::StringTokenizer>
 #if 0
     template<>
-    class RefCountHandle<class sophis::xml::util::DOMDocumentWrapper>
+    class RefCountHandle<class sophisTools::base::StringTokenizer>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::comm::CoherencyChannel>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::comm::CoherencyChannel>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::comm::QuoteInfo>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::comm::QuoteInfo>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::comm::SerializablePacket>
+#if 0
+    template<>
+    class/*or struct*/ RefCountHandle<class sophisTools::comm::SerializablePacket>
+    {
+      // Functions:
+      public: sophisTools::base::RefCountHandle<class sophisTools::comm::SerializablePacket>::~RefCountHandle<class sophisTools::comm::SerializablePacket>(void)
+    public:
+    };
+#endif
+// <class sophisTools::comm::SerializableRiskEvent>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::comm::SerializableRiskEvent>
+    {
+      // Functions:
+      public: sophisTools::base::RefCountHandle<class sophisTools::comm::SerializableRiskEvent>::RefCountHandle<class sophisTools::comm::SerializableRiskEvent>(class sophisTools::comm::SerializableRiskEvent *)
+      public: sophisTools::base::RefCountHandle<class sophisTools::comm::SerializableRiskEvent>::RefCountHandle<class sophisTools::comm::SerializableRiskEvent>(void)
+      public: sophisTools::base::RefCountHandle<class sophisTools::comm::SerializableRiskEvent>::~RefCountHandle<class sophisTools::comm::SerializableRiskEvent>(void)
+      public: class sophisTools::base::RefCountHandle<class sophisTools::comm::SerializableRiskEvent> & sophisTools::base::RefCountHandle<class sophisTools::comm::SerializableRiskEvent>::operator=(class sophisTools::base::RefCountHandle<class sophisTools::comm::SerializableRiskEvent> const &)
+      public: bool sophisTools::base::RefCountHandle<class sophisTools::comm::SerializableRiskEvent>::operator!(void) const
+      public: bool sophisTools::base::RefCountHandle<class sophisTools::comm::SerializableRiskEvent>::operator bool(void) const
+      public: class sophisTools::comm::SerializableRiskEvent * sophisTools::base::RefCountHandle<class sophisTools::comm::SerializableRiskEvent>::operator->(void)
+      // Static functions:
+      public: static class sophisTools::comm::SerializableRiskEvent * sophisTools::base::RefCountHandle<class sophisTools::comm::SerializableRiskEvent>::_duplicate(class sophisTools::comm::SerializableRiskEvent *)
+    public:
+    };
+#endif
+// <class sophisTools::comm::SerializableRiskEventQueue>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::comm::SerializableRiskEventQueue>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::io::BufferedInputStream>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::io::BufferedInputStream>
     {
     public:
     };
@@ -239,15 +280,7 @@ public:
     {
       // Functions:
       public: sophisTools::base::RefCountHandle<class sophisTools::io::ByteArrayIOStream>::~RefCountHandle<class sophisTools::io::ByteArrayIOStream>(void)
-      public: class sophisTools::io::ByteArrayIOStream * sophisTools::base::RefCountHandle<class sophisTools::io::ByteArrayIOStream>::in(void) const
-    public:
-    };
-#endif
-// <class sophisTools::io::ByteArrayOutputStream>
-#if 0
-    template<>
-    class RefCountHandle<class sophisTools::io::ByteArrayOutputStream>
-    {
+      public: class sophisTools::io::ByteArrayIOStream * sophisTools::base::RefCountHandle<class sophisTools::io::ByteArrayIOStream>::operator->(void)
     public:
     };
 #endif
@@ -267,26 +300,58 @@ public:
     public:
     };
 #endif
-// <class sophisTools::io::FilterInputStream>
-#if 0
-    template<>
-    class RefCountHandle<class sophisTools::io::FilterInputStream>
-    {
-    public:
-    };
-#endif
-// <class sophisTools::io::FilterOutputStream>
-#if 0
-    template<>
-    class RefCountHandle<class sophisTools::io::FilterOutputStream>
-    {
-    public:
-    };
-#endif
 // <class sophisTools::io::InputStream>
 #if 0
     template<>
     class RefCountHandle<class sophisTools::io::InputStream>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::io::Library>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::io::Library>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::io::LibraryList>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::io::LibraryList>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::io::LineInputStream>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::io::LineInputStream>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::io::LineOutputStream>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::io::LineOutputStream>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::io::ObjectInputStream>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::io::ObjectInputStream>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::io::ObjectOutputStream>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::io::ObjectOutputStream>
     {
     public:
     };
@@ -299,10 +364,162 @@ public:
     public:
     };
 #endif
-// <class sophisTools::io::RandomAccessInputStream>
+// <class sophisTools::logger::FilterEngine>
 #if 0
     template<>
-    class RefCountHandle<class sophisTools::io::RandomAccessInputStream>
+    class RefCountHandle<class sophisTools::logger::FilterEngine>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::logger::Logger>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::logger::Logger>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::logger::ShiftableLogger>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::logger::ShiftableLogger>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::net::Reactor::EventHandler>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::net::Reactor::EventHandler>
+    {
+    public:
+    };
+#endif
+// <class sophisTools::net::Reactor>
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::net::Reactor>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::config::ArgMap>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::config::ArgMap>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::config::InitParameters>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::config::InitParameters>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::config::PropertyReader>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::config::PropertyReader>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::logger::SafeLogger>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::logger::SafeLogger>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::plugin::Plugin>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::plugin::Plugin>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::plugin::PluginManager>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::plugin::PluginManager>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::server::ApplicationTool>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::server::ApplicationTool>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::statistics::AbstractCounter>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::statistics::AbstractCounter>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::statistics::EventCounter>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::statistics::EventCounter>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::statistics::LateQuotationCounter>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::statistics::LateQuotationCounter>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::thread::Runnable>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::thread::Runnable>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::thread::ScheduledAction>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::thread::ScheduledAction>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::thread::ThreadPool>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::thread::ThreadPool>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::thread::WorkerManager>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::thread::WorkerManager>
+    {
+    public:
+    };
+#endif
+// <class sphSystem::util::UIDGenerator>
+#if 0
+    template<>
+    class RefCountHandle<class sphSystem::util::UIDGenerator>
     {
     public:
     };
@@ -320,7 +537,31 @@ public:
 
 #if 0
     template<>
-    class RefCountHandle<class sophisTools::io::OutputStream>
+    class RefCountHandle<class sophisTools::comm::CoherencyChannel>
+    {
+    public:
+    };
+#endif
+
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::comm::SerializableRiskEvent>
+    {
+    public:
+    };
+#endif
+
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::logger::Logger>
+    {
+    public:
+    };
+#endif
+
+#if 0
+    template<>
+    class RefCountHandle<class sophisTools::logger::ShiftableLogger>
     {
     public:
     };
@@ -338,19 +579,43 @@ public:
     public:
     };
 
-    class/*or struct*/ Runnable : public RefCount
+    class Runnable : public RefCount
     {
+      // Functions:
+      public: sophisTools::base::Runnable::Runnable(void)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::base::Runnable::~Runnable(void)
+#endif
+
+    public:
+    };
+
+    class/*or struct*/ SignalUtil
+    {
+      // Static functions:
+      public: static void sophisTools::base::SignalUtil::setInterruptHandler(void (__cdecl *)(long))
+    public:
+    };
+
+    class StringTokenizer
+    {
+      // Static functions:
+      public: static class sophisTools::base::RefCountHandle<class sophisTools::base::StringTokenizer> sophisTools::base::StringTokenizer::create(class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, bool)
     public:
     };
 
     class/*or struct*/ StringUtil
     {
       // Static functions:
-      public: static class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> sophisTools::base::StringUtil::ordinalMark(long)
-      public: static class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> sophisTools::base::StringUtil::pluralMark(long)
       public: static bool sophisTools::base::StringUtil::string2bool(char const *)
-      public: static class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> sophisTools::base::StringUtil::upperCamel(class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &)
-      public: static class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> sophisTools::base::StringUtil::upperCamel(char const *)
+      public: static void sophisTools::base::StringUtil::trim(class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> &, char)
+    public:
+    };
+
+    class SystemException
+    {
+      // Functions:
+      public: sophisTools::base::SystemException::SystemException(class sophisTools::base::SystemException const &)
     public:
     };
 
@@ -371,49 +636,266 @@ public:
 
   };
 
-  namespace/*or class/struct?*/ io
+  namespace/*or class/struct?*/ comm
   {
     // Nested containers:
-    class ByteArrayIOStream
+    class AlreadyConnected
     {
-      // Static functions:
-      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::ByteArrayIOStream> sophisTools::io::ByteArrayIOStream::create(void)
+      // Functions:
+      public: sophisTools::comm::AlreadyConnected::AlreadyConnected(class sophisTools::comm::AlreadyConnected const &)
+      public: sophisTools::comm::AlreadyConnected::AlreadyConnected(void)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::comm::AlreadyConnected::~AlreadyConnected(void)
+#endif
+
     public:
     };
 
-    class ByteArrayOutputStream
+    class ByteArraySerializableArchive : public SerializableArchive
     {
       // Functions:
-      public: void sophisTools::io::ByteArrayOutputStream::readFrom(class sophisTools::base::RefCountHandle<class sophisTools::io::InputStream>)
-      public: void sophisTools::io::ByteArrayOutputStream::wipe(void)
+      protected: sophisTools::comm::ByteArraySerializableArchive::ByteArraySerializableArchive(class sophisTools::io::ObjectInputStream *, class sophisTools::io::ObjectOutputStream *, class sophisTools::io::ByteArrayRandomAccessIOStream *)
+      protected: sophisTools::comm::ByteArraySerializableArchive::ByteArraySerializableArchive(class sophisTools::base::RefCountHandle<class sophisTools::io::ObjectInputStream>, class sophisTools::base::RefCountHandle<class sophisTools::io::ObjectOutputStream>, class sophisTools::base::RefCountHandle<class sophisTools::io::ByteArrayRandomAccessIOStream>)
+      public: sophisTools::comm::ByteArraySerializableArchive::ByteArraySerializableArchive(class sophisTools::comm::ByteArraySerializableArchive const &)
+      public: class sophisTools::comm::ByteArraySerializableArchive & sophisTools::comm::ByteArraySerializableArchive::operator=(class sophisTools::comm::ByteArraySerializableArchive const &)
+      protected: char const * sophisTools::comm::ByteArraySerializableArchive::getBuffer(void) const
+      protected: class sophisTools::base::RefCountHandle<class sophisTools::io::ByteArrayIOStream> sophisTools::comm::ByteArraySerializableArchive::getByteArray(void)
+      protected: unsigned __int64 sophisTools::comm::ByteArraySerializableArchive::getReadCount(void) const
+      protected: unsigned __int64 sophisTools::comm::ByteArraySerializableArchive::getWriteCount(void) const
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::comm::ByteArraySerializableArchive::~ByteArraySerializableArchive(void)
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(char &) const
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(short &) const
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(int &) const
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(long &) const
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(unsigned long &) const
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(float &) const
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(double &) const
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(class sophis::tools::CSRArchive *&) const
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(__int64 &) const
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(unsigned __int64 &) const
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(bool &) const
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(char *) const
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(class sophisTools::io::Serializable *) const
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(char)
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(short)
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(int)
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(long)
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(unsigned long)
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(float)
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(double)
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(char const *)
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(class sophis::tools::CSRArchive const *)
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(class sophisTools::io::Serializable const *)
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(__int64)
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(unsigned __int64)
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(bool)
+      public: virtual void sophisTools::comm::ByteArraySerializableArchive::Rewind(void) const
+      protected: virtual char const * sophisTools::comm::ByteArraySerializableArchive::getBuffer(void)
+      protected: virtual unsigned __int64 sophisTools::comm::ByteArraySerializableArchive::getReadCount(void)
+      protected: virtual unsigned __int64 sophisTools::comm::ByteArraySerializableArchive::getSize(void)
+      protected: virtual unsigned __int64 sophisTools::comm::ByteArraySerializableArchive::getWriteCount(void)
+      public: virtual void sophisTools::comm::ByteArraySerializableArchive::readObject(class sophisTools::base::RefCountHandle<class sophisTools::io::ObjectInputStream>)
+      public: virtual void sophisTools::comm::ByteArraySerializableArchive::writeObject(class sophisTools::base::RefCountHandle<class sophisTools::io::ObjectOutputStream>) const
+#endif
+
+      // VFTable. Offset=0, Size=34, Start=0
+      // Corresponding base: comm::comm::SerializableArchive
+      // Added virtual functions:
+      public: virtual sophisTools::comm::ByteArraySerializableArchive::~ByteArraySerializableArchive(void); // 0
+      public: virtual void sophisTools::comm::ByteArraySerializableArchive::Rewind(void) const; // 1
+      public: virtual void unknown_vf_0_2(void); // 2
+      public: virtual bool sphSystem::comm::BytesArchive::End(void) const; // 3 (comm::comm::BytesArchive)
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(class sophis::tools::CSRArchive const *); // 4
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(char const *); // 5
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(double); // 6
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(float); // 7
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(__int64); // 8
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(unsigned __int64); // 9
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(unsigned long); // 10
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(long); // 11
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(int); // 12
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(short); // 13
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(char); // 14
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(bool); // 15
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(class sophis::tools::CSRArchive *&) const; // 16
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(char *) const; // 17
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(double &) const; // 18
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(float &) const; // 19
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(__int64 &) const; // 20
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(unsigned __int64 &) const; // 21
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(unsigned long &) const; // 22
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(long &) const; // 23
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(int &) const; // 24
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(short &) const; // 25
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(char &) const; // 26
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(bool &) const; // 27
+      public: virtual class sophis::tools::CSRArchive & sophisTools::comm::ByteArraySerializableArchive::operator<<(class sophisTools::io::Serializable const *); // 28
+      public: virtual class sophis::tools::CSRArchive const & sophisTools::comm::ByteArraySerializableArchive::operator>>(class sophisTools::io::Serializable *) const; // 29
+      protected: virtual char const * sophisTools::comm::ByteArraySerializableArchive::getBuffer(void); // 30
+      protected: virtual unsigned __int64 sophisTools::comm::ByteArraySerializableArchive::getSize(void); // 31
+      protected: virtual unsigned __int64 sophisTools::comm::ByteArraySerializableArchive::getReadCount(void); // 32
+      protected: virtual unsigned __int64 sophisTools::comm::ByteArraySerializableArchive::getWriteCount(void); // 33
+      // VFTable with 0 offset end
+
+      // VFTable. Offset=8, Size=2, Start=2
+      // Corresponding base: io::io::Serializable
+      // Overrides:
+      public: virtual void sophisTools::comm::ByteArraySerializableArchive::readObject(class sophisTools::base::RefCountHandle<class sophisTools::io::ObjectInputStream>) override; // 0
+      public: virtual void sophisTools::comm::ByteArraySerializableArchive::writeObject(class sophisTools::base::RefCountHandle<class sophisTools::io::ObjectOutputStream>) const override; // 1
+      // VFTable with 8 offset end
+
+    public:
+    };
+
+    class ChannelDisconnected
+    {
+      // Functions:
+      public: sophisTools::comm::ChannelDisconnected::ChannelDisconnected(class sophisTools::comm::ChannelDisconnected const &)
+      public: sophisTools::comm::ChannelDisconnected::ChannelDisconnected(void)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::comm::ChannelDisconnected::~ChannelDisconnected(void)
+#endif
+
+    public:
+    };
+
+    class CoherencyChannel
+    {
+      // Functions:
+      public: sophisTools::comm::CoherencyChannel::CoherencyChannel(void)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::comm::CoherencyChannel::~CoherencyChannel(void)
+#endif
+
+    public:
+    };
+
+    class Connection
+    {
+      // Functions:
+      public: void sophisTools::comm::Connection::extractFromConnection(char const *)
+    public:
+    };
+
+    class ConnectionException
+    {
+      // Functions:
+      public: sophisTools::comm::ConnectionException::ConnectionException(class sophisTools::comm::ConnectionException const &)
+    public:
+    };
+
+    class/*or struct*/ ILateQuoteReporter
+    {
+      // Functions:
+      public: sophisTools::comm::ILateQuoteReporter::ILateQuoteReporter(void)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::comm::ILateQuoteReporter::~ILateQuoteReporter(void)
+#endif
+
+    public:
+    };
+
+    class/*or struct*/ OpaqueSerializerPrototypeManagerSingleton
+    {
       // Static functions:
-      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::ByteArrayOutputStream> sophisTools::io::ByteArrayOutputStream::create(void)
+      public: static void sophisTools::comm::OpaqueSerializerPrototypeManagerSingleton::dispose(void)
+      public: static void sophisTools::comm::OpaqueSerializerPrototypeManagerSingleton::init(void)
+    public:
+    };
+
+    class QuoteInfo
+    {
+      // Functions:
+      public: void sophisTools::comm::QuoteInfo::Print(class std::basic_ostream<char, struct std::char_traits<char>> &)
+      // Static functions:
+      public: static void sophisTools::comm::QuoteInfo::PrintHeader(class std::basic_ostream<char, struct std::char_traits<char>> &)
+    public:
+    };
+
+    class/*or struct*/ SerializableArchive : public CSRArchive, public Serializable
+    {
+      // Warning: Greater base vftable size!
+      // VFTable. Offset=0, Size=0, Start=3
+      // Corresponding base: tools::tools::CSRArchive
+      // VFTable with 0 offset end
+
+    public:
+    };
+
+    class SerializablePacket
+    {
+    public:
+    };
+
+    class SerializableRiskEvent
+    {
+      // Functions:
+      public: class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> sophisTools::comm::SerializableRiskEvent::toString(void) const
+    public:
+    };
+
+    class SerializableRiskEventQueue
+    {
+      // Static functions:
+      public: static class sophisTools::base::RefCountHandle<class sophisTools::comm::SerializableRiskEventQueue> sophisTools::comm::SerializableRiskEventQueue::create(void)
+    public:
+    };
+
+    class UnexpectedEvent
+    {
+      // Functions:
+      public: sophisTools::comm::UnexpectedEvent::UnexpectedEvent(class sophisTools::comm::UnexpectedEvent const &)
+      public: sophisTools::comm::UnexpectedEvent::UnexpectedEvent(class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::comm::UnexpectedEvent::~UnexpectedEvent(void)
+#endif
+
+    public:
+    };
+
+
+  };
+
+  namespace/*or class/struct?*/ io
+  {
+    // Nested containers:
+    class BufferedInputStream
+    {
+      // Static functions:
+      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::BufferedInputStream> sophisTools::io::BufferedInputStream::create(class sophisTools::base::RefCountHandle<class sophisTools::io::InputStream>)
+    public:
+    };
+
+    class ByteArrayIOStream
+    {
+      // Functions:
+      public: void sophisTools::io::ByteArrayIOStream::wipe(void)
     public:
     };
 
     class ByteArrayRandomAccessIOStream
     {
       // Static functions:
-      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::ByteArrayRandomAccessIOStream> sophisTools::io::ByteArrayRandomAccessIOStream::create(char const *, unsigned __int64, unsigned __int64)
       public: static class sophisTools::base::RefCountHandle<class sophisTools::io::ByteArrayRandomAccessIOStream> sophisTools::io::ByteArrayRandomAccessIOStream::create(void)
     public:
     };
 
     class File
     {
+      // Functions:
+      public: void sophisTools::io::File::changeWorkingDirectory(void)
       // Static functions:
       public: static class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> sophisTools::io::File::baseName(char const *, bool)
       public: static class sophisTools::base::RefCountHandle<class sophisTools::io::File> sophisTools::io::File::create(class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &)
       public: static class sophisTools::base::RefCountHandle<class sophisTools::io::File> sophisTools::io::File::create(class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &)
-      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::File> sophisTools::io::File::findFileInPathEnvironment(char const *, char const *)
-      public: static class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> sophisTools::io::File::parentName(char const *)
+      // Variables:
+      public: static char const sophisTools::io::File::OS_SEPARATOR
     public:
     };
 
     class/*or struct*/ FileInputStream
     {
-      // Functions:
-      public: class sophisTools::base::RefCountHandle<class sophisTools::io::File> sophisTools::io::FileInputStream::getFile(void)
       // Static functions:
       public: static class sophisTools::base::RefCountHandle<class sophisTools::io::InputStream> sophisTools::io::FileInputStream::create(class sophisTools::base::RefCountHandle<class sophisTools::io::File>)
     public:
@@ -426,17 +908,10 @@ public:
     public:
     };
 
-    class FilterInputStream
+    class IOException
     {
       // Functions:
-      public: void sophisTools::io::FilterInputStream::setUnderlyingInputStream(class sophisTools::base::RefCountHandle<class sophisTools::io::InputStream>)
-    public:
-    };
-
-    class FilterOutputStream
-    {
-      // Functions:
-      public: void sophisTools::io::FilterOutputStream::setUnderlyingOutputStream(class sophisTools::base::RefCountHandle<class sophisTools::io::OutputStream>)
+      public: sophisTools::io::IOException::IOException(class sophisTools::io::IOException const &)
     public:
     };
 
@@ -445,49 +920,82 @@ public:
     public:
     };
 
-    class OutputStream
+    class Library
+    {
+      // Static functions:
+      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::Library> sophisTools::io::Library::create(char const *, char)
+      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::LibraryList> sophisTools::io::Library::getLoadedModules(void)
+    public:
+    };
+
+    class LibraryList
     {
     public:
     };
 
-    class/*or struct*/ OutputStreamStdAdapter
+    class LineInputStream
+    {
+      // Static functions:
+      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::LineInputStream> sophisTools::io::LineInputStream::create(class sophisTools::base::RefCountHandle<class sophisTools::io::InputStream>)
+    public:
+    };
+
+    class LineOutputStream
+    {
+      // Static functions:
+      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::LineOutputStream> sophisTools::io::LineOutputStream::create(class sophisTools::base::RefCountHandle<class sophisTools::io::OutputStream>)
+    public:
+    };
+
+    class/*or struct*/ NewByteArrayRandomAccessIOStream
+    {
+      // Static functions:
+      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::ByteArrayRandomAccessIOStream> sophisTools::io::NewByteArrayRandomAccessIOStream::create(char const *, unsigned __int64, unsigned __int64, bool)
+    public:
+    };
+
+    class ObjectInputStream
     {
       // Functions:
-      public: sophisTools::io::OutputStreamStdAdapter::OutputStreamStdAdapter(class std::basic_ostream<char, struct std::char_traits<char>> &)
-      public: void sophisTools::io::OutputStreamStdAdapter::`vbase dtor'(void)
+      public: sophisTools::io::ObjectInputStream::ObjectInputStream(class sophisTools::io::InputStream *)
+      public: void sophisTools::io::ObjectInputStream::`vbase dtor'(void)
+      // Static functions:
+      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::ObjectInputStream> sophisTools::io::ObjectInputStream::create(class sophisTools::base::RefCountHandle<class sophisTools::io::InputStream>)
 #if 0 // All found virtual functions names:
-      public: virtual void sophisTools::io::OutputStreamStdAdapter::_add_ref(void)
-      public: virtual void sophisTools::io::OutputStreamStdAdapter::_remove_ref(void)
-      public: virtual long sophisTools::io::OutputStreamStdAdapter::getRef(void) const
+      public: virtual void sophisTools::io::ObjectInputStream::_add_ref(void)
+      public: virtual void sophisTools::io::ObjectInputStream::_remove_ref(void)
+      public: virtual long sophisTools::io::ObjectInputStream::getRef(void) const
 #endif
 
-      // VFTable. Offset=48, Size=4, Start=0
-      // Owner: SophisXML.dll
+      // VFTable. Offset=64, Size=4, Start=0
+      // Owner: SophisSystem.dll
       // Added virtual functions:
 #if 0 // Warning: There are virtual functions probably from base class.
-      public: virtual void unknown_vf_48_0(void); // 0
-      public: virtual void unknown_vf_48_1(void); // 1
-      public: virtual void unknown_vf_48_2(void); // 2
-      public: virtual void unknown_vf_48_3(void); // 3
+      public: virtual void unknown_vf_64_0(void); // 0
+      public: virtual void unknown_vf_64_1(void); // 1
+      public: virtual void unknown_vf_64_2(void); // 2
+      public: virtual void unknown_vf_64_3(void); // 3
 #endif
-      // VFTable with 48 offset end
+      // VFTable with 64 offset end
 
     public:
     };
 
-    class/*or struct*/ PipedInputStream
+    class ObjectOutputStream
     {
       // Functions:
-      public: sophisTools::io::PipedInputStream::PipedInputStream(class sophisTools::base::RefCountHandle<class sophisTools::io::InputStream>, class sophisTools::base::RefCountHandle<class sophisTools::io::OutputStream>)
-      public: void sophisTools::io::PipedInputStream::`vbase dtor'(void)
+      public: sophisTools::io::ObjectOutputStream::ObjectOutputStream(class sophisTools::io::OutputStream *)
+      public: void sophisTools::io::ObjectOutputStream::`vbase dtor'(void)
+      // Static functions:
+      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::ObjectOutputStream> sophisTools::io::ObjectOutputStream::create(class sophisTools::base::RefCountHandle<class sophisTools::io::OutputStream>)
 #if 0 // All found virtual functions names:
-      public: virtual void sophisTools::io::PipedInputStream::_add_ref(void)
-      public: virtual void sophisTools::io::PipedInputStream::_remove_ref(void)
-      public: virtual long sophisTools::io::PipedInputStream::getRef(void) const
+      public: virtual void sophisTools::io::ObjectOutputStream::_add_ref(void)
+      public: virtual void sophisTools::io::ObjectOutputStream::_remove_ref(void)
+      public: virtual long sophisTools::io::ObjectOutputStream::getRef(void) const
 #endif
 
       // VFTable. Offset=56, Size=4, Start=0
-      // Owner: SophisXML.dll
+      // Owner: SophisSystem.dll
       // Added virtual functions:
 #if 0 // Warning: There are virtual functions probably from base class.
       public: virtual void unknown_vf_56_0(void); // 0
@@ -500,34 +1008,46 @@ public:
     public:
     };
 
-    class/*or struct*/ RandomAccessFileInputStream
-    {
-      // Static functions:
-      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::RandomAccessInputStream> sophisTools::io::RandomAccessFileInputStream::create(class sophisTools::base::RefCountHandle<class sophisTools::io::File>)
-    public:
-    };
-
-    class RandomAccessInputStream
+    class OutputStream
     {
     public:
     };
 
-    class/*or struct*/ Serializable
+    class/*or struct*/ OutputStreamAdapter
     {
+      // Functions:
+      public: sophisTools::io::OutputStreamAdapter::OutputStreamAdapter(class sophisTools::base::RefCountHandle<class sophisTools::io::OutputStream>)
+      public: void sophisTools::io::OutputStreamAdapter::`vbase dtor'(void)
     public:
     };
 
-    class/*or struct*/ StreamUtil
+    class Serializable
     {
-      // Static functions:
-      public: static char const * sophisTools::io::StreamUtil::getNewLine(void)
+      // VFTable. Offset=0, Size=2, Start=0
+      // Added virtual functions:
+      public: virtual void sophisTools::comm::ByteArraySerializableArchive::readObject(class sophisTools::base::RefCountHandle<class sophisTools::io::ObjectInputStream>); // 0 (comm::comm::ByteArraySerializableArchive)
+      public: virtual void sophisTools::comm::ByteArraySerializableArchive::writeObject(class sophisTools::base::RefCountHandle<class sophisTools::io::ObjectOutputStream>) const; // 1 (comm::comm::ByteArraySerializableArchive)
+      // VFTable with 0 offset end
+
     public:
     };
 
-    class/*or struct*/ TeeOutputStream
+    class SerializationException
     {
-      // Static functions:
-      public: static class sophisTools::base::RefCountHandle<class sophisTools::io::OutputStream> sophisTools::io::TeeOutputStream::create(class sophisTools::base::RefCountHandle<class sophisTools::io::OutputStream>, class sophisTools::base::RefCountHandle<class sophisTools::io::OutputStream>)
+      // Functions:
+      public: sophisTools::io::SerializationException::SerializationException(class sophisTools::io::SerializationException const &)
+    public:
+    };
+
+    class TimeOutException
+    {
+      // Functions:
+      public: sophisTools::io::TimeOutException::TimeOutException(class sophisTools::io::TimeOutException const &)
+      public: sophisTools::io::TimeOutException::TimeOutException(long, char const *)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::io::TimeOutException::~TimeOutException(void)
+#endif
+
     public:
     };
 
@@ -537,12 +1057,50 @@ public:
   namespace/*or class/struct?*/ logger
   {
     // Nested containers:
+    class FilterEngine : public RefCount
+    {
+      // Functions:
+      public: sophisTools::logger::FilterEngine::FilterEngine(void)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::logger::FilterEngine::~FilterEngine(void)
+#endif
+
+    public:
+    };
+
+    class Logger
+    {
+      // Functions:
+      public: sophisTools::logger::Logger::Logger(void)
+      // Static functions:
+      public: static char const * sophisTools::logger::Logger::getLevelName(enum Log::Severity)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::logger::Logger::~Logger(void)
+#endif
+
+    public:
+    };
+
     class/*or struct*/ LoggerUtil
     {
       // Static functions:
+      public: static void sophisTools::logger::LoggerUtil::Log(enum Log::Severity, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, char const *, char const *, unsigned int)
       public: static void sophisTools::logger::LoggerUtil::Log(enum Log::Severity, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, char const *, char const *, char const *, unsigned int)
       public: static void sophisTools::logger::LoggerUtil::Log(enum Log::Severity, char const *, char const *, char const *, char const *, unsigned int)
+      public: static void sophisTools::logger::LoggerUtil::Log(enum Log::Severity, char const *, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, char const *, char const *, unsigned int)
+      public: static void sophisTools::logger::LoggerUtil::addConstraints(class std::list<struct sophisTools::logger::filterConstraint, class std::allocator<struct sophisTools::logger::filterConstraint>>)
+      public: static void sophisTools::logger::LoggerUtil::dispose(void)
+      protected: static void sophisTools::logger::LoggerUtil::init(class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, enum Log::Severity)
       public: static bool sophisTools::logger::LoggerUtil::isLogWorthIt(enum Log::Severity)
+      public: static void sophisTools::logger::LoggerUtil::removeAllConstraints(void)
+      public: static void sophisTools::logger::LoggerUtil::setDefaultLogger(class sophisTools::base::RefCountHandle<class sophisTools::logger::Logger>)
+      public: static void sophisTools::logger::LoggerUtil::setDefaultVerbosity(enum Log::Severity const &)
+      public: static void sophisTools::logger::LoggerUtil::setFilterEngine(class sophisTools::base::RefCountHandle<class sophisTools::logger::FilterEngine>)
+      public: static void sophisTools::logger::LoggerUtil::setLogPrivateBytes(bool)
+      public: static void sophisTools::logger::LoggerUtil::setLogger(class sophisTools::base::RefCountHandle<class sophisTools::logger::Logger>)
+      public: static void sophisTools::logger::LoggerUtil::setMode(bool)
+      public: static void sophisTools::logger::LoggerUtil::setProcessName(class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &)
+      public: static void sophisTools::logger::LoggerUtil::setVerbosity(enum Log::Severity const &, bool)
     public:
     };
 
@@ -550,8 +1108,10 @@ public:
     {
       // Static functions:
       public: static bool sophisTools::logger::LoggerUtilLog4cxx::IsLogWorthIt(enum Log::Severity)
+      public: static void sophisTools::logger::LoggerUtilLog4cxx::Log(enum Log::Severity, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, char const *)
       public: static void sophisTools::logger::LoggerUtilLog4cxx::Log(enum Log::Severity, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, char const *, char const *)
       public: static void sophisTools::logger::LoggerUtilLog4cxx::Log(enum Log::Severity, char const *, char const *, char const *)
+      public: static void sophisTools::logger::LoggerUtilLog4cxx::Log(enum Log::Severity, char const *, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, char const *)
     public:
     };
 
@@ -564,12 +1124,31 @@ public:
 
       // Functions:
       public: enum sophisTools::logger::PostMortemLogEngine::ePostMortemState sophisTools::logger::PostMortemLogEngine::getActivationState(void) const
+      public: void sophisTools::logger::PostMortemLogEngine::pushMessage(enum Log::Severity, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, char const *, char const *, unsigned __int64)
       public: void sophisTools::logger::PostMortemLogEngine::pushMessage(enum Log::Severity, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, char const *, char const *, char const *, unsigned __int64)
       public: void sophisTools::logger::PostMortemLogEngine::pushMessage(enum Log::Severity, char const *, char const *, char const *, char const *, unsigned __int64)
       // Static functions:
       public: static class sophisTools::logger::PostMortemLogEngine & sophisTools::logger::PostMortemLogEngine::Instance(void)
       // Variables:
       public: static enum sophisTools::logger::PostMortemLogEngine::ePostMortemState sophisTools::logger::PostMortemLogEngine::bIsPostMortemLogActivated
+    public:
+    };
+
+    class/*or struct*/ ShiftFileLogger
+    {
+      // Static functions:
+      public: static class sophisTools::base::RefCountHandle<class sophisTools::logger::ShiftableLogger> sophisTools::logger::ShiftFileLogger::create(class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, unsigned __int64, bool, bool, bool)
+    public:
+    };
+
+    class ShiftableLogger
+    {
+      // Functions:
+      public: sophisTools::logger::ShiftableLogger::ShiftableLogger(void)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::logger::ShiftableLogger::~ShiftableLogger(void)
+#endif
+
     public:
     };
 
@@ -580,13 +1159,158 @@ public:
     public:
     };
 
+    class/*or struct*/ SophisLoggerImpl
+    {
+      // Static functions:
+      public: static void sophisTools::logger::SophisLoggerImpl::Dispose(void)
+    public:
+    };
+
+    class/*or struct*/ StderrLogger
+    {
+      // Static functions:
+      public: static class sophisTools::base::RefCountHandle<class sophisTools::logger::Logger> sophisTools::logger::StderrLogger::create(bool)
+    public:
+    };
+
+    struct filterConstraint
+    {
+      // Functions:
+      public: sophisTools::logger::filterConstraint::filterConstraint(struct sophisTools::logger::filterConstraint &&)
+      public: sophisTools::logger::filterConstraint::filterConstraint(struct sophisTools::logger::filterConstraint const &)
+      public: sophisTools::logger::filterConstraint::filterConstraint(char const *, char const *, bool, enum Log::Severity)
+      public: sophisTools::logger::filterConstraint::~filterConstraint(void)
+    public:
+    };
+
+
+  };
+
+  namespace/*or class/struct?*/ net
+  {
+    // Nested containers:
+    class/*or struct*/ InetAddress
+    {
+      // Static functions:
+      public: static class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> sophisTools::net::InetAddress::getLocalHostName(void)
+    public:
+    };
+
+    class/*or struct*/ NetworkUtil
+    {
+      // Static functions:
+      public: static void sophisTools::net::NetworkUtil::dispose(void)
+      public: static void sophisTools::net::NetworkUtil::init(void)
+    public:
+    };
+
+    class Reactor
+    {
+    public:
+      // Nested containers:
+      class EventHandler
+      {
+      public:
+      };
+
+
+      // Functions:
+      public: sophisTools::net::Reactor::Reactor(void)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::net::Reactor::~Reactor(void)
+#endif
+
+    public:
+    };
+
+    class/*or struct*/ SelectReactor
+    {
+    public:
+      // Nested containers:
+      struct HandlerInfo
+      {
+      public:
+      };
+
+
+      // Functions:
+      protected: sophisTools::net::SelectReactor::SelectReactor(__int64)
+      protected: void sophisTools::net::SelectReactor::evalFdSets(struct fd_set &, struct fd_set &, class std::list<struct sophisTools::net::SelectReactor::HandlerInfo, class std::allocator<struct sophisTools::net::SelectReactor::HandlerInfo>> &)
+#if 0 // All found virtual functions names:
+      public: virtual sophisTools::net::SelectReactor::~SelectReactor(void)
+      public: virtual void sophisTools::net::SelectReactor::_add_ref(void)
+      public: virtual void sophisTools::net::SelectReactor::_remove_ref(void)
+      public: virtual void sophisTools::net::SelectReactor::dispatch(void)
+      public: virtual bool sophisTools::net::SelectReactor::dispatchOneEvent(long)
+      public: virtual bool sophisTools::net::SelectReactor::eventReady(void)
+      public: virtual long sophisTools::net::SelectReactor::getRef(void) const
+      public: virtual void sophisTools::net::SelectReactor::interruptDispatch(void)
+      public: virtual void sophisTools::net::SelectReactor::registerHandler(class sophisTools::base::RefCountHandle<class sophisTools::net::Reactor::EventHandler>, long, long)
+      protected: virtual void sophisTools::net::SelectReactor::setFdSets(struct fd_set &, struct fd_set &, int &)
+      public: virtual void sophisTools::net::SelectReactor::unregisterHandler(class sophisTools::base::RefCountHandle<class sophisTools::net::Reactor::EventHandler>)
+#endif
+
+    public:
+    };
+
+
+  };
+
+  namespace/*or class/struct?*/ time
+  {
+    // Nested containers:
+    class Date
+    {
+      // Functions:
+      public: class std::basic_ostream<char, struct std::char_traits<char>> & sophisTools::time::Date::toStream(class std::basic_ostream<char, struct std::char_traits<char>> &) const
+      // Static functions:
+      public: static class sophisTools::time::Date sophisTools::time::Date::Build(class std::basic_istream<char, struct std::char_traits<char>> &)
+    public:
+    };
+
+    class DateTime
+    {
+      // Functions:
+      public: sophisTools::time::DateTime::DateTime(void)
+      // Static functions:
+      public: static class sophisTools::time::DateTime sophisTools::time::DateTime::Build(class std::basic_istream<char, struct std::char_traits<char>> &)
+    public:
+    };
+
+    class Time24
+    {
+      // Functions:
+      public: bool sophisTools::time::Time24::operator==(class sophisTools::time::Time24 const &) const
+      public: class sophisTools::time::Time24 sophisTools::time::Time24::operator-(class sophisTools::time::Time24 const &) const
+      public: bool sophisTools::time::Time24::operator<(class sophisTools::time::Time24 const &) const
+      public: class std::basic_ostream<char, struct std::char_traits<char>> & sophisTools::time::Time24::toStream(class std::basic_ostream<char, struct std::char_traits<char>> &) const
+      // Static functions:
+      public: static class sophisTools::time::Time24 sophisTools::time::Time24::Build(class std::basic_istream<char, struct std::char_traits<char>> &)
+      public: static class sophisTools::time::Time24 sophisTools::time::Time24::Build(short, short, short)
+      // Variables:
+      public: static class sophisTools::time::Time24 const sophisTools::time::Time24::MIDNITE_00
+      public: static class sophisTools::time::Time24 const sophisTools::time::Time24::ONE_DAY
+    public:
+    };
+
+    class/*or struct*/ TimeUtil
+    {
+      // Static functions:
+      public: static class sophisTools::time::Date & sophisTools::time::TimeUtil::addDay(class sophisTools::time::Date &, long)
+      public: static class sophisTools::time::DateTime sophisTools::time::TimeUtil::from_Time_t(__int64 const &)
+      public: static class sophisTools::time::Date sophisTools::time::TimeUtil::now_to_SophisDate(void)
+      public: static class sophisTools::time::Time24 sophisTools::time::TimeUtil::now_to_SophisTime_Time24(void)
+      public: static unsigned long sophisTools::time::TimeUtil::secondsFromMidnight(class sophisTools::time::Time24 const &)
+      public: static unsigned long sophisTools::time::TimeUtil::secondsToMidnight(class sophisTools::time::Time24 const &)
+      public: static __int64 sophisTools::time::TimeUtil::to_Time_t(class sophisTools::time::DateTime const &)
+    public:
+    };
+
 
   };
 
 
   // Functions:
-  class std::basic_ostream<char, struct std::char_traits<char>> & operator<<(class std::basic_ostream<char, struct std::char_traits<char>> &, class CSRDay const &)
-  class std::basic_ostream<char, struct std::char_traits<char>> & operator<<(class std::basic_ostream<char, struct std::char_traits<char>> &, class FlyWeightString const &)
-  int strnicmp(class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char>> const &, unsigned __int64)
+  void waitForAllSons(void)
 public:
 };
